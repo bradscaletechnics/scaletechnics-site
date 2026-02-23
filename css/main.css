@@ -20,7 +20,7 @@
 
 /* ─── Reset & Base ─── */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -1146,28 +1146,98 @@ footer { padding: 60px 0; border-top: 1px solid var(--gray-2); }
 }
 
 @media (max-width: 768px) {
+  /* Container */
+  .container { padding: 0 20px; }
+
+  /* Nav */
   .nav-links { display: none; }
   .mobile-toggle { display: block; }
-  .problem-grid,
-  .control-grid,
-  .why-now-grid,
-  .local-inner,
-  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-  .pipeline { grid-template-columns: 1fr; }
-  .pipeline-step { border-radius: 12px !important; }
+
+  /* Hero */
+  .hero { padding: 100px 0 56px; }
+  .hero h1 { letter-spacing: -1px; }
+  .hero-sub { margin-bottom: 36px; font-size: 16px; }
+  .hero-actions { flex-direction: column; }
+  .hero-tag { margin-bottom: 28px; }
+  .btn-primary, .btn-secondary { text-align: center; justify-content: center; width: 100%; }
+
+  /* Ticker */
+  .ticker-bar { margin-top: 48px; }
+
+  /* Section labels */
+  .section-label { margin-bottom: 28px; }
+
+  /* Problem */
+  .problem { padding: 72px 0; }
+  .problem-grid { grid-template-columns: 1fr; gap: 36px; }
+  .problem h2 { font-size: clamp(30px, 8vw, 42px); }
+
+  /* Revenue */
+  .revenue { padding: 72px 0; }
+  .revenue-header { margin-bottom: 40px; }
+  .revenue h2 { font-size: clamp(30px, 8vw, 48px); }
+  .pipeline { grid-template-columns: 1fr; margin-bottom: 40px; }
+  .pipeline-step { border-radius: 12px !important; padding: 24px 20px; }
   .pipeline-step::after { display: none; }
-  .agents-grid,
-  .packages-grid,
-  .proof-grid,
+
+  /* Agents */
+  .agents { padding: 48px 0 64px; }
+  .agents-header { flex-direction: column; align-items: flex-start; margin-bottom: 28px; }
+  .agents-grid { grid-template-columns: 1fr; }
+  .agent-card { padding: 28px 24px; }
+
+  /* Control */
+  .control { padding: 72px 0; }
+  .control-grid { grid-template-columns: 1fr; gap: 40px; }
+  .phone-mock { max-width: 100%; }
+
+  /* Case study teasers */
+  .cs-teasers { padding: 64px 0; }
+  .cs-teasers-header { flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 28px; }
   .cs-teasers-grid { grid-template-columns: 1fr; }
+  .cs-teaser-metric { font-size: 40px; }
+
+  /* Packages */
+  .packages { padding: 72px 0; }
+  .packages-header { margin-bottom: 40px; }
+  .packages-grid { grid-template-columns: 1fr; }
+  .packages-grid .pkg-card:last-child { grid-column: unset; max-width: none; }
+  .pkg-card { padding: 32px 24px; }
+
+  /* Social proof */
+  .social-proof { padding: 64px 0; }
+  .proof-grid { grid-template-columns: 1fr; }
+  .proof-card { padding: 28px 24px; }
+
+  /* Stats */
+  .stats { padding: 56px 0; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
+
+  /* Why Now */
+  .why-now { padding: 72px 0; }
+  .why-now-grid { grid-template-columns: 1fr; gap: 48px; }
+  .why-now h2 { font-size: clamp(30px, 8vw, 44px); }
+
+  /* Vancouver / Local */
+  .local { padding: 64px 0; }
+  .local-inner { grid-template-columns: 1fr; gap: 36px; }
+  .local-map { height: 260px; }
+
+  /* CTA */
+  .cta-section { padding: 80px 0; }
+  .cta-section h2 { letter-spacing: -0.5px; }
+  .cta-actions { flex-direction: column; align-items: center; }
+  .cta-actions .btn-primary,
+  .cta-actions .btn-secondary { width: 100%; max-width: 360px; justify-content: center; }
+
+  /* Footer */
+  footer { padding: 48px 0; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .footer-brand p { max-width: none; }
+
+  /* Sticky CTA */
   .sticky-cta { bottom: 16px; right: 16px; left: 16px; }
   .sticky-cta-inner { justify-content: space-between; border-radius: 16px; }
   .sticky-cta-btn { flex: 1; border-radius: 16px; justify-content: center; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
-  .phone-mock { max-width: 100%; }
-  .hero { padding: 120px 0 60px; }
-  .hero-actions { flex-direction: column; }
-  .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
-  .cta-actions { flex-direction: column; align-items: center; }
-  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
 }

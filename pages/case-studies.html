@@ -272,13 +272,21 @@
   }
   .cs-cta .cta-actions { position: relative; z-index: 2; }
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
+    .page-hero { padding: 120px 0 64px; }
+    .case-studies-grid { margin-bottom: 64px; }
+    .filter-tabs { margin-bottom: 40px; }
     .cs-card { grid-template-columns: 1fr; }
-    .cs-sidebar { border-right: none; border-bottom: 1px solid var(--gray-2); padding: 32px 24px; }
+    .cs-sidebar { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 32px 24px; gap: 24px; }
     .cs-content { padding: 32px 24px; }
+    .cs-metric-num { font-size: 28px; }
+    .verticals { padding: 56px 0; }
     .verticals-grid { grid-template-columns: repeat(2, 1fr); }
+    .cs-cta { padding: 72px 0; }
+    .cs-cta .cta-actions { flex-direction: column; align-items: center; }
+    .cs-cta .btn-primary, .cs-cta .btn-secondary { width: 100%; max-width: 360px; justify-content: center; text-align: center; }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     .verticals-grid { grid-template-columns: 1fr; }
   }
 </style>

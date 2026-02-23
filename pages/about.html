@@ -334,13 +334,28 @@
   }
   .about-cta .cta-actions { position: relative; z-index: 2; }
 
-  @media (max-width: 900px) {
-    .origin-grid, .founder-grid, .vancouver-grid { grid-template-columns: 1fr; gap: 48px; }
+  @media (max-width: 768px) {
+    .page-hero { padding: 120px 0 64px; }
+    .origin { padding: 64px 0; }
+    .origin-grid { grid-template-columns: 1fr; gap: 40px; }
+    .origin-quote { padding: 24px 28px; }
+    .belief { padding: 64px 0; }
     .belief-grid { grid-template-columns: 1fr; }
-    .belief-item { border-radius: 12px !important; }
+    .belief-item { border-radius: 12px !important; padding: 32px 24px; }
+    .founder { padding: 64px 0; }
+    .founder-grid { grid-template-columns: 1fr; gap: 40px; }
+    .founder-card { max-width: 400px; }
+    .founder-avatar { height: 220px; }
+    .stack { padding: 56px 0; }
     .stack-grid { grid-template-columns: repeat(2, 1fr); }
+    .vancouver { padding: 64px 0; }
+    .vancouver-grid { grid-template-columns: 1fr; gap: 36px; }
+    .vc-map { height: 260px; }
+    .about-cta { padding: 72px 0; }
+    .about-cta .cta-actions { flex-direction: column; align-items: center; }
+    .about-cta .btn-primary, .about-cta .btn-secondary { width: 100%; max-width: 360px; justify-content: center; text-align: center; }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     .stack-grid { grid-template-columns: 1fr; }
   }
 </style>

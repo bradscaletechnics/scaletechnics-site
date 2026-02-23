@@ -259,12 +259,20 @@
   .services-cta .cta-actions { position: relative; z-index: 2; }
 
   @media (max-width: 768px) {
-    .how-overview-grid { grid-template-columns: 1fr; gap: 48px; }
+    .page-hero { padding: 120px 0 64px; }
+    .how-overview { padding: 64px 0; }
+    .how-overview-grid { grid-template-columns: 1fr; gap: 40px; }
+    .agents-detail { padding: 64px 0; }
+    .agents-detail-header { margin-bottom: 40px; }
     .agent-detail-card { grid-template-columns: 1fr; }
     .agent-detail-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 32px 24px; }
     .agent-detail-right { padding: 32px 24px; }
+    .whats-included { padding: 64px 0; }
     .included-grid { grid-template-columns: 1fr; }
-    .included-item { border-radius: 12px !important; }
+    .included-item { border-radius: 12px !important; padding: 32px 24px; }
+    .services-cta { padding: 72px 0; }
+    .services-cta .cta-actions { flex-direction: column; align-items: center; }
+    .services-cta .btn-primary, .services-cta .btn-secondary { width: 100%; max-width: 360px; justify-content: center; text-align: center; }
   }
 </style>
 </head>
