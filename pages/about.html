@@ -20,7 +20,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/main.css">
 <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
+  .leaflet-control-attribution { background: rgba(10,10,10,0.8) !important; color: rgba(255,255,255,0.2) !important; font-size: 9px !important; border-radius: 4px 0 0 0 !important; }
+  .leaflet-control-attribution a { color: rgba(255,255,255,0.25) !important; }
+  .st-marker-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .st-marker-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: #0a0a0a; background: #c8ff00; padding: 5px 12px; border-radius: 6px; white-space: nowrap; box-shadow: 0 4px 20px rgba(200,255,0,0.35), 0 2px 6px rgba(0,0,0,0.4); }
+  .st-marker-dot { width: 12px; height: 12px; background: #c8ff00; border-radius: 50%; border: 2px solid rgba(10,10,10,0.9); box-shadow: 0 0 0 5px rgba(200,255,0,0.2), 0 0 16px rgba(200,255,0,0.4); }
+</style>
   .page-hero {
     padding: 160px 0 100px;
     position: relative;
@@ -284,48 +291,11 @@
   }
   .vc-list li::before { content: '→'; color: rgba(255,255,255,0.3); font-weight: 400; flex-shrink: 0; }
   .vc-map {
-    background: var(--gray-1);
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 16px;
     height: 360px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     overflow: hidden;
-  }
-  .vc-map::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 40% 50%, rgba(200,255,0,0.08) 0%, transparent 50%),
-      radial-gradient(circle at 70% 60%, rgba(200,255,0,0.04) 0%, transparent 50%);
-  }
-  .vc-map-text {
-    font-family: 'Instrument Serif', serif;
-    font-size: 36px;
-    color: var(--gray-3);
-    position: relative; z-index: 2;
-  }
-  .vc-map-pin {
-    position: absolute;
-    top: 45%; left: 45%;
-    width: 16px; height: 16px;
-    background: var(--accent);
-    border-radius: 50%;
-    z-index: 3;
-    animation: pulse 2s infinite;
-  }
-  .vc-map-pin::after {
-    content: 'Scale Technics HQ';
-    position: absolute;
-    left: 24px; top: -4px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--accent);
-    white-space: nowrap;
-    letter-spacing: 1px;
   }
 
   /* CTA */
@@ -523,10 +493,7 @@
           <li>Direct access to the team that built your system</li>
         </ul>
       </div>
-      <div class="vc-map">
-        <div class="vc-map-pin"></div>
-        <div class="vc-map-text">Vancouver, BC</div>
-      </div>
+      <div class="vc-map" id="hq-map-about"></div>
     </div>
   </div>
 </section>
@@ -579,5 +546,31 @@
 </footer>
 
 <script src="../js/main.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function() {
+  // Update LAT/LNG to your exact office location
+  var LAT = 49.2827, LNG = -123.1207;
+  var map = L.map('hq-map-about', {
+    center: [LAT, LNG],
+    zoom: 14,
+    zoomControl: false,
+    scrollWheelZoom: false,
+    dragging: true
+  });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+  var icon = L.divIcon({
+    className: '',
+    html: '<div class="st-marker-wrap"><div class="st-marker-label">Scale Technics HQ</div><div class="st-marker-dot"></div></div>',
+    iconSize: [160, 48],
+    iconAnchor: [80, 48]
+  });
+  L.marker([LAT, LNG], { icon: icon }).addTo(map);
+})();
+</script>
 </body>
 </html>
