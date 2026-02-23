@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies — Scale Technics AI Solutions</title>
+<meta name="description" content="See how Scale Technics builds autonomous AI revenue systems for service businesses, real estate, med spas, and professional firms in Vancouver.">
+<meta property="og:title" content="Case Studies — Scale Technics AI Solutions">
+<meta property="og:description" content="Real systems built for Vancouver businesses. See the results across home services, real estate, aesthetics, and professional services.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scaletechnics.com/pages/case-studies.html">
+<meta property="og:image" content="https://scaletechnics.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Case Studies — Scale Technics AI Solutions">
+<meta name="twitter:description" content="Real systems built for Vancouver businesses. See the results.">
+<meta name="twitter:image" content="https://scaletechnics.com/images/og-image.png">
+<link rel="canonical" href="https://scaletechnics.com/pages/case-studies.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<style>
+  .page-hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -300px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(200,255,0,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-hero-label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .page-hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(44px, 6vw, 80px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+    max-width: 800px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero p {
+    font-size: clamp(17px, 2vw, 20px);
+    color: var(--gray-4);
+    line-height: 1.6;
+    max-width: 560px;
+  }
+
+  /* Industry Filter */
+  .industry-filter {
+    padding: 60px 0 0;
+    border-top: 1px solid var(--gray-2);
+  }
+  .filter-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+  .filter-tab {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: 1px solid var(--gray-2);
+    background: transparent;
+    color: var(--gray-3);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .filter-tab.active, .filter-tab:hover {
+    background: var(--accent);
+    color: var(--black);
+    border-color: var(--accent);
+  }
+
+  /* Case Study Cards */
+  .case-studies-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 100px;
+  }
+  .cs-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  .cs-card:hover { border-color: rgba(255,255,255,0.12); }
+  .cs-sidebar {
+    background: var(--gray-1);
+    padding: 48px 40px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .cs-industry {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .cs-sidebar h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .cs-metrics { display: flex; flex-direction: column; gap: 16px; }
+  .cs-metric-item {}
+  .cs-metric-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 36px;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .cs-metric-label { font-size: 12px; color: var(--gray-3); }
+  .cs-agents-used {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .cs-agents-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+    margin-bottom: 4px;
+  }
+  .cs-agent-tag {
+    font-size: 12px;
+    color: var(--gray-4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .cs-agent-tag::before { content: '→'; color: var(--accent); font-size: 10px; }
+
+  .cs-content {
+    padding: 48px;
+    background: var(--black);
+  }
+  .cs-section-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+    margin-bottom: 12px;
+  }
+  .cs-content h3 { font-size: 17px; font-weight: 600; margin-bottom: 12px; }
+  .cs-content p { font-size: 14px; color: var(--gray-4); line-height: 1.7; margin-bottom: 32px; }
+  .cs-content p:last-of-type { margin-bottom: 0; }
+  .cs-divider {
+    height: 1px;
+    background: var(--gray-2);
+    margin: 28px 0;
+  }
+  .cs-quote {
+    background: var(--gray-1);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    margin-top: 28px;
+  }
+  .cs-quote p {
+    font-family: 'Instrument Serif', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .cs-quote-attr { font-size: 12px; color: var(--gray-3); }
+
+  /* Verticals We Serve */
+  .verticals {
+    padding: 80px 0;
+    background: var(--gray-1);
+    border-top: 1px solid var(--gray-2);
+    border-bottom: 1px solid var(--gray-2);
+  }
+  .verticals-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+  .vertical-card {
+    background: var(--black);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: all 0.3s;
+  }
+  .vertical-card:hover {
+    border-color: rgba(255,255,255,0.12);
+    transform: translateY(-2px);
+  }
+  .vertical-icon {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(200,255,0,0.5);
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  .vertical-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+  .vertical-card p { font-size: 13px; color: var(--gray-3); line-height: 1.5; }
+
+  /* CTA */
+  .cs-cta {
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+  }
+  .cs-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cs-cta h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    position: relative; z-index: 2;
+  }
+  .cs-cta h2 em { font-style: italic; color: var(--accent); }
+  .cs-cta p {
+    font-size: 18px;
+    color: var(--gray-4);
+    max-width: 500px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    position: relative; z-index: 2;
+  }
+  .cs-cta .cta-actions { position: relative; z-index: 2; }
+
+  @media (max-width: 900px) {
+    .cs-card { grid-template-columns: 1fr; }
+    .cs-sidebar { border-right: none; border-bottom: 1px solid var(--gray-2); padding: 32px 24px; }
+    .cs-content { padding: 32px 24px; }
+    .verticals-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .verticals-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="/" class="logo">Scale<span>.</span>Technics</a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a Walkthrough</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">Case Studies</div>
+    <h1>Built for the businesses<br>that run <em>this city.</em></h1>
+    <p>Real systems. Real operations. See how we deploy autonomous AI infrastructure across Vancouver's most competitive industries.</p>
+  </div>
+</section>
+
+<!-- ═══ CASE STUDIES ═══ -->
+<section class="industry-filter">
+  <div class="container">
+
+    <div class="case-studies-grid">
+
+      <!-- Home Services -->
+      <div class="cs-card">
+        <div class="cs-sidebar">
+          <div>
+            <div class="cs-industry">Home Services</div>
+            <h2>HVAC & Plumbing Operation</h2>
+          </div>
+          <div class="cs-metrics">
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">3×</div>
+              <div class="cs-metric-label">Increase in booked jobs from same ad spend</div>
+            </div>
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">47min → 55s</div>
+              <div class="cs-metric-label">Average lead response time</div>
+            </div>
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">68%</div>
+              <div class="cs-metric-label">Reduction in no-shows</div>
+            </div>
+          </div>
+          <div class="cs-agents-used">
+            <div class="cs-agents-label">Agents deployed</div>
+            <div class="cs-agent-tag">Sales Agent</div>
+            <div class="cs-agent-tag">Booking Agent</div>
+            <div class="cs-agent-tag">Ad & Campaign Agent</div>
+            <div class="cs-agent-tag">Customer Service Agent</div>
+          </div>
+        </div>
+        <div class="cs-content">
+          <div class="cs-section-title">The Problem</div>
+          <p>A 12-truck HVAC and plumbing operation running Google Ads 24/7 but only staffed 8am–5pm. After-hours leads — which represented 40% of all inbound — were going to voicemail and dying. The owner was manually following up on leads the next morning, often 12–18 hours later. Competitors were booking those jobs overnight.</p>
+
+          <div class="cs-divider"></div>
+          <div class="cs-section-title">What We Built</div>
+          <p>We deployed the Sales and Booking agents to handle every inbound lead instantly — regardless of time. The Ad agent monitored Google spend and shifted budget toward emergency and after-hours keywords automatically. A 5-touch follow-up sequence ran for every lead that didn't book immediately, re-engaging across SMS and email over 7 days.</p>
+          <p>The Booking Agent handled the entire scheduling lifecycle: confirmation, 24h reminder, 1h reminder, and a no-show recovery sequence that rebooked 68% of missed appointments within 48 hours.</p>
+
+          <div class="cs-quote">
+            <p>"We were spending $6,000 a month on ads and watching leads disappear after hours. Now the system captures everything and our calendar is full before I even wake up."</p>
+            <div class="cs-quote-attr">Owner, Vancouver HVAC & Plumbing Operation</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Estate -->
+      <div class="cs-card">
+        <div class="cs-sidebar">
+          <div>
+            <div class="cs-industry">Real Estate</div>
+            <h2>Independent Brokerage, Metro Vancouver</h2>
+          </div>
+          <div class="cs-metrics">
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">5×</div>
+              <div class="cs-metric-label">More listing consultations booked monthly</div>
+            </div>
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">11 hrs</div>
+              <div class="cs-metric-label">Per week saved on admin and follow-up</div>
+            </div>
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">90 days</div>
+              <div class="cs-metric-label">Cold lead reactivation window automated</div>
+            </div>
+          </div>
+          <div class="cs-agents-used">
+            <div class="cs-agents-label">Agents deployed</div>
+            <div class="cs-agent-tag">Sales Agent</div>
+            <div class="cs-agent-tag">Booking Agent</div>
+            <div class="cs-agent-tag">Outreach Agent</div>
+            <div class="cs-agent-tag">Social Media Agent</div>
+          </div>
+        </div>
+        <div class="cs-content">
+          <div class="cs-section-title">The Problem</div>
+          <p>A 4-agent brokerage generating strong lead volume from a combination of social media, referrals, and portal listings — but struggling to stay on top of follow-up. Leads that didn't respond immediately were falling out of the pipeline. The team's best agents were spending 3+ hours a day on admin instead of being in front of clients.</p>
+
+          <div class="cs-divider"></div>
+          <div class="cs-section-title">What We Built</div>
+          <p>The Sales Agent took over all initial lead contact and qualification — responding to every inquiry within 60 seconds with personalized messages that referenced the specific property or neighbourhood the lead was asking about. A 90-day follow-up sequence kept every lead warm through a mix of market updates, new listings, and check-ins.</p>
+          <p>The Outreach Agent ran a systematic past-client and sphere-of-influence campaign, generating referral conversations without any agent time invested. The Social Media Agent maintained consistent posting across Instagram and LinkedIn, keeping the brand visible between transactions.</p>
+
+          <div class="cs-quote">
+            <p>"My agents used to spend their mornings doing admin. Now they show up to calls that are already qualified and booked. The pipeline basically manages itself."</p>
+            <div class="cs-quote-attr">Principal Broker, Metro Vancouver</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Med Spa -->
+      <div class="cs-card">
+        <div class="cs-sidebar">
+          <div>
+            <div class="cs-industry">Aesthetics & Wellness</div>
+            <h2>Med Spa, Downtown Vancouver</h2>
+          </div>
+          <div class="cs-metrics">
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">$42K</div>
+              <div class="cs-metric-label">Monthly revenue from reactivated clients</div>
+            </div>
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">4.9★</div>
+              <div class="cs-metric-label">Google rating after automated review requests</div>
+            </div>
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">22%</div>
+              <div class="cs-metric-label">Increase in average client visit frequency</div>
+            </div>
+          </div>
+          <div class="cs-agents-used">
+            <div class="cs-agents-label">Agents deployed</div>
+            <div class="cs-agent-tag">Sales Agent</div>
+            <div class="cs-agent-tag">Booking Agent</div>
+            <div class="cs-agent-tag">Customer Service Agent</div>
+            <div class="cs-agent-tag">Ad & Campaign Agent</div>
+          </div>
+        </div>
+        <div class="cs-content">
+          <div class="cs-section-title">The Problem</div>
+          <p>A high-end med spa with a strong existing client base but a leaking retention engine. Clients were coming in once, getting great results, then disappearing — not because they were unhappy, but because no one was following up. The front desk was overwhelmed with inbound inquiries and couldn't manage outbound retention simultaneously. Ad spend was generating leads but the consultation-to-booking conversion was under 35%.</p>
+
+          <div class="cs-divider"></div>
+          <div class="cs-section-title">What We Built</div>
+          <p>The Customer Service Agent took over inbound inquiry handling, responding to DMs, emails, and web form submissions instantly with treatment-specific information and a direct booking link. Consultation-to-booking conversion increased significantly because no lead waited more than two minutes for a response.</p>
+          <p>A retention system was built using a post-visit sequence: thank you message on day 1, results check-in on day 7, rebooking nudge at the optimal return interval for each treatment. Lapsed clients (90+ days inactive) were automatically enrolled in a reactivation campaign with a time-limited offer. Google review requests went out automatically after every successful appointment.</p>
+
+          <div class="cs-quote">
+            <p>"We had thousands of past clients who just stopped coming back. The reactivation campaign brought in over $40K in the first 60 days — from people already in our database."</p>
+            <div class="cs-quote-attr">Owner, Downtown Vancouver Med Spa</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Services -->
+      <div class="cs-card">
+        <div class="cs-sidebar">
+          <div>
+            <div class="cs-industry">Professional Services</div>
+            <h2>Accounting Firm, 8-Person Practice</h2>
+          </div>
+          <div class="cs-metrics">
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">2.4×</div>
+              <div class="cs-metric-label">Increase in new client consultations</div>
+            </div>
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">Zero</div>
+              <div class="cs-metric-label">Leads lost to slow response during tax season</div>
+            </div>
+            <div class="cs-metric-item">
+              <div class="cs-metric-num">8 hrs</div>
+              <div class="cs-metric-label">Per week returned to partners from admin</div>
+            </div>
+          </div>
+          <div class="cs-agents-used">
+            <div class="cs-agents-label">Agents deployed</div>
+            <div class="cs-agent-tag">Sales Agent</div>
+            <div class="cs-agent-tag">Booking Agent</div>
+            <div class="cs-agent-tag">Customer Service Agent</div>
+            <div class="cs-agent-tag">Outreach Agent</div>
+          </div>
+        </div>
+        <div class="cs-content">
+          <div class="cs-section-title">The Problem</div>
+          <p>An 8-person accounting practice with strong word-of-mouth referrals but no systematic way to capture or convert inbound interest. During tax season, the team was too busy serving existing clients to respond to new inquiries — often taking 2–3 days to reply. Potential clients were choosing competitors simply because they responded faster. The partners were also spending significant time on intake calls that should have been handled at a lower level.</p>
+
+          <div class="cs-divider"></div>
+          <div class="cs-section-title">What We Built</div>
+          <p>The Sales Agent handled all initial prospect contact — responding to every inquiry with a professional, compliant message that qualified the prospect's needs and booked a discovery call. The Booking Agent managed the entire consultation scheduling flow, including pre-call questionnaire delivery and document collection reminders.</p>
+          <p>The Outreach Agent ran a systematic referral campaign targeting the firm's existing client base and professional network, generating consistent referral conversations without partner time. Client service communications — deadline reminders, document request follow-ups, filing confirmations — were fully automated through the Customer Service Agent.</p>
+
+          <div class="cs-quote">
+            <p>"Tax season used to mean dropping the ball on new business. This year we captured every single lead while the team focused entirely on client work. First time that's ever happened."</p>
+            <div class="cs-quote-attr">Managing Partner, Vancouver Accounting Firm</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VERTICALS ═══ -->
+<section class="verticals">
+  <div class="container">
+    <div class="section-label" style="justify-content:center;">Industries We Work With</div>
+    <h2 style="font-family:'Instrument Serif',serif;font-size:clamp(32px,4vw,48px);font-weight:400;text-align:center;line-height:1.1;margin-bottom:16px;">Built for service businesses<br>that <em style="font-style:italic;color:var(--accent);">run on relationships.</em></h2>
+    <div class="verticals-grid">
+      <div class="vertical-card">
+        <div class="vertical-icon">01</div>
+        <h3>Home Services</h3>
+        <p>HVAC, plumbing, electrical, roofing, landscaping, cleaning. High-volume lead environments where speed to response wins.</p>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">02</div>
+        <h3>Real Estate</h3>
+        <p>Agents, brokerages, mortgage brokers. Relationship-driven businesses that live and die on follow-up consistency.</p>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">03</div>
+        <h3>Aesthetics & Wellness</h3>
+        <p>Med spas, clinics, salons, fitness studios. Retention and reactivation businesses where lifetime client value is the game.</p>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">04</div>
+        <h3>Professional Services</h3>
+        <p>Law firms, accountants, financial advisors, consultants. High-value client businesses that need to protect partner time.</p>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">05</div>
+        <h3>Auto Dealerships</h3>
+        <p>New, used, and specialty dealers. High-intent buyers who expect instant responses and frictionless buying experiences.</p>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">06</div>
+        <h3>Healthcare & Dental</h3>
+        <p>Clinics, dental practices, specialists. Appointment-driven businesses where no-shows and gaps cost real money.</p>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">07</div>
+        <h3>Hospitality</h3>
+        <p>Restaurants, event venues, catering. Businesses that run on reservations, reviews, and repeat customers.</p>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">08</div>
+        <h3>E-Commerce & Retail</h3>
+        <p>Direct-to-consumer brands. Abandoned cart recovery, post-purchase sequences, and loyalty automation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cs-cta">
+  <div class="container">
+    <h2>Your industry.<br>Your <em>system.</em></h2>
+    <p>Every engagement starts with understanding your specific operation. Book a walkthrough and we'll show you exactly how this applies to your business.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-primary">Book a Walkthrough <span>→</span></a>
+      <a href="services.html" class="btn-secondary">See the Full System</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">Scale<span>.</span>Technics</a>
+        <p>Autonomous AI infrastructure for businesses that refuse to stand still. Vancouver, BC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="services.html">Services</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>System</h4>
+        <a href="/#system">24/7 Revenue System</a>
+        <a href="/#agents">AI Agents</a>
+        <a href="/#packages">Packages</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/company/110513984/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/scaletechnics/" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:hello@scaletechnics.com">hello@scaletechnics.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Scale Technics AI Solutions. All rights reserved.</p>
+      <p class="mono" style="font-size:12px;color:var(--gray-3);">Built with intelligence.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

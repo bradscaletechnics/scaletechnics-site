@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're Booked — Scale Technics AI Solutions</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<style>
+  .ty-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .ty-wrap::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -60%);
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(200,255,0,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .ty-inner {
+    text-align: center;
+    max-width: 580px;
+    position: relative; z-index: 2;
+  }
+  .ty-icon {
+    width: 72px; height: 72px;
+    background: rgba(200,255,0,0.08);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 32px;
+  }
+  .ty-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .ty-inner h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+  }
+  .ty-inner h1 em { font-style: italic; color: var(--accent); }
+  .ty-inner p {
+    font-size: 18px;
+    color: var(--gray-4);
+    line-height: 1.6;
+    margin-bottom: 48px;
+  }
+  .ty-steps {
+    background: var(--gray-1);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: left;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .ty-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .ty-step-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    padding-top: 2px;
+    flex-shrink: 0;
+    width: 24px;
+  }
+  .ty-step h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .ty-step p { font-size: 13px; color: var(--gray-3); line-height: 1.5; margin: 0; }
+  .ty-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="/" class="logo">Scale<span>.</span>Technics</a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a Walkthrough</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="ty-wrap">
+  <div class="ty-inner">
+    <div class="ty-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 14l6.5 6.5L23 8" stroke="#c8ff00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="ty-tag">Message Received</div>
+    <h1>We'll be in touch<br><em>shortly.</em></h1>
+    <p>Your walkthrough request is in. We respond within 2 hours during business hours — usually faster. Here's what happens next.</p>
+
+    <div class="ty-steps">
+      <div class="ty-step">
+        <div class="ty-step-num">01</div>
+        <div>
+          <h4>We review your submission</h4>
+          <p>We'll look at your business, industry, and the challenges you mentioned before we reach out.</p>
+        </div>
+      </div>
+      <div class="ty-step">
+        <div class="ty-step-num">02</div>
+        <div>
+          <h4>You'll hear from us directly</h4>
+          <p>Expect a call or text from a real person — not an automated sequence. We'll confirm a time that works for your walkthrough.</p>
+        </div>
+      </div>
+      <div class="ty-step">
+        <div class="ty-step-num">03</div>
+        <div>
+          <h4>30-minute live walkthrough</h4>
+          <p>We'll show you the system running, map it to your specific operation, and give you a clear picture of what's possible.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ty-actions">
+      <a href="/" class="btn-primary">Back to Home <span>→</span></a>
+      <a href="case-studies.html" class="btn-secondary">Read Case Studies</a>
+    </div>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

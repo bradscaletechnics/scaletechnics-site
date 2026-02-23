@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Scale Technics AI Solutions</title>
+<meta name="description" content="Scale Technics is a Vancouver-based AI infrastructure company. We install autonomous agent systems directly into business operations — not SaaS, not consulting. Infrastructure.">
+<meta property="og:title" content="About — Scale Technics AI Solutions">
+<meta property="og:description" content="Vancouver-based AI infrastructure. We install autonomous agent systems directly into your business operations.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scaletechnics.com/pages/about.html">
+<meta property="og:image" content="https://scaletechnics.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About — Scale Technics AI Solutions">
+<meta name="twitter:description" content="Vancouver-based AI infrastructure. Not SaaS. Not consulting. Infrastructure.">
+<meta name="twitter:image" content="https://scaletechnics.com/images/og-image.png">
+<link rel="canonical" href="https://scaletechnics.com/pages/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<style>
+  .page-hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -300px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(200,255,0,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-hero-label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .page-hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(44px, 6vw, 80px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+    max-width: 800px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero p {
+    font-size: clamp(17px, 2vw, 20px);
+    color: var(--gray-4);
+    line-height: 1.6;
+    max-width: 560px;
+  }
+
+  /* Origin Story */
+  .origin {
+    padding: 100px 0;
+    border-top: 1px solid var(--gray-2);
+  }
+  .origin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .origin h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 32px;
+  }
+  .origin h2 em { font-style: italic; color: var(--accent); }
+  .origin p { font-size: 17px; color: var(--gray-4); line-height: 1.8; margin-bottom: 20px; }
+  .origin-quote {
+    background: var(--gray-1);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 16px 16px 0;
+    padding: 32px 36px;
+    margin-top: 8px;
+  }
+  .origin-quote p {
+    font-family: 'Instrument Serif', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .origin-quote-attr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* The Belief */
+  .belief {
+    padding: 100px 0;
+    background: var(--gray-1);
+    border-top: 1px solid var(--gray-2);
+    border-bottom: 1px solid var(--gray-2);
+  }
+  .belief-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    margin-top: 64px;
+  }
+  .belief-item {
+    background: var(--black);
+    padding: 40px 32px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: border-color 0.3s;
+  }
+  .belief-item:first-child { border-radius: 16px 0 0 16px; }
+  .belief-item:last-child { border-radius: 0 16px 16px 0; }
+  .belief-item:hover { border-color: rgba(200,255,0,0.2); }
+  .belief-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .belief-item h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .belief-item p { font-size: 14px; color: var(--gray-3); line-height: 1.7; }
+
+  /* Founder */
+  .founder {
+    padding: 100px 0;
+  }
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .founder-card {
+    background: var(--gray-1);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .founder-avatar {
+    height: 280px;
+    background: linear-gradient(135deg, var(--gray-2), var(--gray-1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .founder-avatar-initials {
+    font-family: 'Instrument Serif', serif;
+    font-size: 80px;
+    color: var(--accent);
+    font-weight: 400;
+    opacity: 0.4;
+  }
+  .founder-avatar-label {
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+  }
+  .founder-card-info {
+    padding: 28px 28px 32px;
+  }
+  .founder-name { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+  .founder-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .founder-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .founder-tag {
+    font-size: 12px;
+    color: var(--gray-4);
+    background: var(--gray-2);
+    border: 1px solid var(--gray-2);
+    border-radius: 100px;
+    padding: 6px 14px;
+  }
+
+  .founder-bio {}
+  .founder-bio h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 28px;
+  }
+  .founder-bio h2 em { font-style: italic; color: var(--accent); }
+  .founder-bio p { font-size: 16px; color: var(--gray-4); line-height: 1.8; margin-bottom: 20px; }
+
+  /* Tech Stack */
+  .stack {
+    padding: 80px 0;
+    background: var(--gray-1);
+    border-top: 1px solid var(--gray-2);
+    border-bottom: 1px solid var(--gray-2);
+  }
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+  .stack-item {
+    background: var(--black);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: all 0.3s;
+  }
+  .stack-item:hover { border-color: rgba(255,255,255,0.12); transform: translateY(-2px); }
+  .stack-icon {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(200,255,0,0.5);
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  .stack-item h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+  .stack-item p { font-size: 13px; color: var(--gray-3); line-height: 1.5; }
+
+  /* Vancouver */
+  .vancouver {
+    padding: 100px 0;
+  }
+  .vancouver-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .vancouver h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .vancouver h2 em { font-style: italic; color: var(--accent); }
+  .vancouver p { font-size: 16px; color: var(--gray-4); line-height: 1.8; margin-bottom: 20px; }
+  .vc-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+  .vc-list li {
+    font-size: 15px;
+    color: var(--gray-4);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .vc-list li::before { content: '→'; color: rgba(255,255,255,0.3); font-weight: 400; flex-shrink: 0; }
+  .vc-map {
+    background: var(--gray-1);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .vc-map::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 40% 50%, rgba(200,255,0,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 70% 60%, rgba(200,255,0,0.04) 0%, transparent 50%);
+  }
+  .vc-map-text {
+    font-family: 'Instrument Serif', serif;
+    font-size: 36px;
+    color: var(--gray-3);
+    position: relative; z-index: 2;
+  }
+  .vc-map-pin {
+    position: absolute;
+    top: 45%; left: 45%;
+    width: 16px; height: 16px;
+    background: var(--accent);
+    border-radius: 50%;
+    z-index: 3;
+    animation: pulse 2s infinite;
+  }
+  .vc-map-pin::after {
+    content: 'Scale Technics HQ';
+    position: absolute;
+    left: 24px; top: -4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    white-space: nowrap;
+    letter-spacing: 1px;
+  }
+
+  /* CTA */
+  .about-cta {
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+  }
+  .about-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .about-cta h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    position: relative; z-index: 2;
+  }
+  .about-cta h2 em { font-style: italic; color: var(--accent); }
+  .about-cta p {
+    font-size: 18px;
+    color: var(--gray-4);
+    max-width: 500px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    position: relative; z-index: 2;
+  }
+  .about-cta .cta-actions { position: relative; z-index: 2; }
+
+  @media (max-width: 900px) {
+    .origin-grid, .founder-grid, .vancouver-grid { grid-template-columns: 1fr; gap: 48px; }
+    .belief-grid { grid-template-columns: 1fr; }
+    .belief-item { border-radius: 12px !important; }
+    .stack-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .stack-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="/" class="logo">Scale<span>.</span>Technics</a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a Walkthrough</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">About</div>
+    <h1>We're not selling software.<br>We're building <em>infrastructure.</em></h1>
+    <p>Scale Technics installs autonomous AI systems directly into business operations. Not a platform. Not a subscription. A working system that runs while you don't.</p>
+  </div>
+</section>
+
+<!-- ═══ ORIGIN ═══ -->
+<section class="origin">
+  <div class="container">
+    <div class="origin-grid">
+      <div>
+        <div class="section-label">The Story</div>
+        <h2>Built out of a<br>real <em>frustration.</em></h2>
+        <p>Scale Technics was founded after watching too many good businesses lose revenue to slow systems, missed follow-ups, and tools that required more management than they saved. The promise of AI was everywhere. The reality — for most business owners — was a graveyard of unused software subscriptions and half-implemented automations.</p>
+        <p>The problem wasn't the technology. It was the delivery model. Software companies build platforms. They don't install outcomes. So that's what we set out to do differently.</p>
+        <p>We build, configure, and install the entire system ourselves. We train the agents on your business. We stay involved. And we're measured by revenue outcomes — not feature adoption metrics.</p>
+      </div>
+      <div class="origin-quote">
+        <p>"Most businesses don't need more software. They need a system that actually runs — one that was built for their operation, installed by someone who cares, and keeps working without constant attention."</p>
+        <div class="origin-quote-attr">Brad — Founder, Scale Technics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BELIEFS ═══ -->
+<section class="belief">
+  <div class="container">
+    <div class="section-label" style="justify-content:center;">What We Believe</div>
+    <h2 style="font-family:'Instrument Serif',serif;font-size:clamp(32px,4vw,48px);font-weight:400;text-align:center;line-height:1.1;margin-bottom:16px;">The principles that<br>shape <em style="font-style:italic;color:var(--accent);">how we build.</em></h2>
+    <div class="belief-grid">
+      <div class="belief-item">
+        <div class="belief-num">01 — Outcomes over features</div>
+        <h3>We're measured by what your business produces.</h3>
+        <p>Not by dashboards filled, logins created, or features activated. The only metric that matters is whether your revenue grew and your time freed up.</p>
+      </div>
+      <div class="belief-item">
+        <div class="belief-num">02 — Installation over instruction</div>
+        <h3>We don't hand you tools. We build the thing.</h3>
+        <p>Every system we deliver is fully operational before we hand it over. You don't need to hire someone to implement it or attend training sessions to use it.</p>
+      </div>
+      <div class="belief-item">
+        <div class="belief-num">03 — Speed is the advantage</div>
+        <h3>The window between early and late is closing fast.</h3>
+        <p>The businesses that embed AI into their operations now will compound that advantage every day. Waiting is a decision — and it has a cost that compounds quietly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOUNDER ═══ -->
+<section class="founder">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-card">
+        <div class="founder-avatar">
+          <div class="founder-avatar-initials">B</div>
+          <div class="founder-avatar-label">Vancouver, BC</div>
+        </div>
+        <div class="founder-card-info">
+          <div class="founder-name">Brad</div>
+          <div class="founder-title">Founder — Scale Technics</div>
+          <div class="founder-tags">
+            <div class="founder-tag">AI Systems</div>
+            <div class="founder-tag">Revenue Operations</div>
+            <div class="founder-tag">Vancouver</div>
+            <div class="founder-tag">CaptivationHub</div>
+          </div>
+        </div>
+      </div>
+      <div class="founder-bio">
+        <div class="section-label">The Founder</div>
+        <h2>Built by someone who<br>runs businesses <em>too.</em></h2>
+        <p>Scale Technics was built by Brad, a Vancouver-based operator who has spent years at the intersection of technology and business growth. The company came out of direct experience with the problem — not a venture-funded idea.</p>
+        <p>After seeing firsthand how much revenue service businesses were leaking to slow lead response, inconsistent follow-up, and overwhelmed teams, Brad built the system he wished existed — and then started installing it for others.</p>
+        <p>Today, Scale Technics works with service businesses across Vancouver and the Lower Mainland, building and operating AI infrastructure that runs their revenue engine around the clock.</p>
+        <p>We're a small team on purpose. Every client engagement gets direct attention. No account managers. No hand-offs. The person who builds your system is the person who stays involved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TECH STACK ═══ -->
+<section class="stack">
+  <div class="container">
+    <div class="section-label" style="justify-content:center;">The Technology</div>
+    <h2 style="font-family:'Instrument Serif',serif;font-size:clamp(32px,4vw,48px);font-weight:400;text-align:center;line-height:1.1;margin-bottom:16px;">Built on infrastructure<br>that <em style="font-style:italic;color:var(--accent);">actually works.</em></h2>
+    <div class="stack-grid">
+      <div class="stack-item">
+        <div class="stack-icon">01</div>
+        <h3>ClawdBot</h3>
+        <p>Our core AI agent orchestration platform. Powers the conversational intelligence and workflow automation across every client system.</p>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">02</div>
+        <h3>CaptivationHub</h3>
+        <p>CRM backbone for lead management, pipeline tracking, and multi-channel communication. Built for service businesses.</p>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">03</div>
+        <h3>Claude AI</h3>
+        <p>Anthropic's Claude powers our highest-intelligence agent functions — nuanced communication, objection handling, and complex reasoning.</p>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">04</div>
+        <h3>On-Premise Option</h3>
+        <p>For clients requiring data sovereignty, we offer local AI deployment via Mac Studio M4 Max hardware. Your data never leaves your building.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VANCOUVER ═══ -->
+<section class="vancouver">
+  <div class="container">
+    <div class="vancouver-grid">
+      <div>
+        <div class="section-label">Vancouver, BC</div>
+        <h2>Local team.<br>Real <em>presence.</em></h2>
+        <p>We work with Vancouver businesses because we live here. We know the market, we understand the competitive landscape, and we show up in person.</p>
+        <p>Most AI companies are remote-first, product-led businesses that will never meet you. We sit down with every client. We understand their operation before we touch a single setting.</p>
+        <ul class="vc-list">
+          <li>In-person discovery and strategy sessions</li>
+          <li>Hands-on installation — we build it, we don't hand you a manual</li>
+          <li>Ongoing optimization and monthly reviews</li>
+          <li>Direct access to the team that built your system</li>
+        </ul>
+      </div>
+      <div class="vc-map">
+        <div class="vc-map-pin"></div>
+        <div class="vc-map-text">Vancouver, BC</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="about-cta">
+  <div class="container">
+    <h2>Ready to meet<br>the <em>team?</em></h2>
+    <p>Book a 30-minute walkthrough. We'll show you the system live and map it to your business. No pitch deck. Just the system running.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-primary">Book a Walkthrough <span>→</span></a>
+      <a href="case-studies.html" class="btn-secondary">See Case Studies</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">Scale<span>.</span>Technics</a>
+        <p>Autonomous AI infrastructure for businesses that refuse to stand still. Vancouver, BC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="services.html">Services</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>System</h4>
+        <a href="/#system">24/7 Revenue System</a>
+        <a href="/#agents">AI Agents</a>
+        <a href="/#packages">Packages</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/company/110513984/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/scaletechnics/" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:hello@scaletechnics.com">hello@scaletechnics.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Scale Technics AI Solutions. All rights reserved.</p>
+      <p class="mono" style="font-size:12px;color:var(--gray-3);">Built with intelligence.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Scale Technics AI Solutions</title>
+<meta name="description" content="Six autonomous AI agents that run your business operations around the clock — sales, ads, booking, customer service, social media, and outreach.">
+<meta property="og:title" content="Services — Scale Technics AI Solutions">
+<meta property="og:description" content="Six autonomous AI agents that run your business operations around the clock.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scaletechnics.com/pages/services.html">
+<meta property="og:image" content="https://scaletechnics.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Services — Scale Technics AI Solutions">
+<meta name="twitter:description" content="Six autonomous AI agents that run your business operations around the clock.">
+<meta name="twitter:image" content="https://scaletechnics.com/images/og-image.png">
+<link rel="canonical" href="https://scaletechnics.com/pages/services.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<style>
+  .page-hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -300px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(200,255,0,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-hero-label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .page-hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(44px, 6vw, 80px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+    max-width: 800px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero p {
+    font-size: clamp(17px, 2vw, 20px);
+    color: var(--gray-4);
+    line-height: 1.6;
+    max-width: 560px;
+  }
+
+  /* How it works overview */
+  .how-overview {
+    padding: 100px 0;
+    border-top: 1px solid var(--gray-2);
+  }
+  .how-overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .how-overview h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .how-overview h2 em { font-style: italic; color: var(--accent); }
+  .how-overview p { font-size: 16px; color: var(--gray-4); line-height: 1.7; margin-bottom: 16px; }
+  .overview-steps { display: flex; flex-direction: column; gap: 4px; }
+  .overview-step {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--gray-2);
+  }
+  .overview-step:last-child { border-bottom: none; }
+  .overview-step-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    padding-top: 2px;
+  }
+  .overview-step-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .overview-step-desc { font-size: 14px; color: var(--gray-3); line-height: 1.5; }
+
+  /* Agent deep dive */
+  .agents-detail { padding: 100px 0; }
+  .agents-detail-header { margin-bottom: 64px; }
+  .agents-detail h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .agents-detail h2 em { font-style: italic; color: var(--accent); }
+  .agents-detail-sub { font-size: 17px; color: var(--gray-3); max-width: 560px; line-height: 1.6; }
+
+  .agent-detail-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+  }
+  .agent-detail-card:hover { border-color: rgba(200,255,0,0.2); }
+  .agent-detail-left {
+    padding: 48px;
+    background: var(--gray-1);
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  .agent-detail-right {
+    padding: 48px;
+    background: var(--black);
+  }
+  .agent-detail-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(200,255,0,0.5);
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+  .agent-detail-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .agent-detail-left h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .agent-detail-left p {
+    font-size: 15px;
+    color: var(--gray-4);
+    line-height: 1.7;
+  }
+  .agent-detail-right h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+    margin-bottom: 24px;
+  }
+  .capability-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .capability-list li {
+    font-size: 14px;
+    color: var(--gray-4);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--gray-1);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.06);
+    line-height: 1.4;
+  }
+  .capability-list li::before {
+    content: '—';
+    color: rgba(255,255,255,0.25);
+    font-size: 12px;
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+
+  /* What's included */
+  .whats-included {
+    padding: 100px 0;
+    background: var(--gray-1);
+    border-top: 1px solid var(--gray-2);
+    border-bottom: 1px solid var(--gray-2);
+  }
+  .included-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 64px;
+  }
+  .included-item {
+    background: var(--black);
+    padding: 40px 32px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: border-color 0.3s;
+  }
+  .included-item:first-child { border-radius: 16px 0 0 16px; }
+  .included-item:last-child { border-radius: 0 16px 16px 0; }
+  .included-item:hover { border-color: rgba(200,255,0,0.2); }
+  .included-icon {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .included-item h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+  .included-item p { font-size: 14px; color: var(--gray-3); line-height: 1.6; }
+
+  /* Services CTA */
+  .services-cta {
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+  }
+  .services-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .services-cta h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    position: relative; z-index: 2;
+  }
+  .services-cta h2 em { font-style: italic; color: var(--accent); }
+  .services-cta p {
+    font-size: 18px;
+    color: var(--gray-4);
+    max-width: 500px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    position: relative; z-index: 2;
+  }
+  .services-cta .cta-actions { position: relative; z-index: 2; }
+
+  @media (max-width: 768px) {
+    .how-overview-grid { grid-template-columns: 1fr; gap: 48px; }
+    .agent-detail-card { grid-template-columns: 1fr; }
+    .agent-detail-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 32px 24px; }
+    .agent-detail-right { padding: 32px 24px; }
+    .included-grid { grid-template-columns: 1fr; }
+    .included-item { border-radius: 12px !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="/" class="logo">Scale<span>.</span>Technics</a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a Walkthrough</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">Services</div>
+    <h1>The AI infrastructure your<br>competitors don't have <em>yet.</em></h1>
+    <p>Six autonomous agents. One connected system. Every lead captured, qualified, followed up, and closed — without a human in the loop.</p>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="how-overview">
+  <div class="container">
+    <div class="how-overview-grid">
+      <div>
+        <div class="section-label">The System</div>
+        <h2>Not software.<br><em>Infrastructure.</em></h2>
+        <p>Most tools give you a platform and leave you to figure it out. We install a fully operational AI system directly into your business — connected to your CRM, your calendar, your ads, and your communication channels.</p>
+        <p>Your agents are live from day one. They don't need training, they don't take sick days, and they don't forget to follow up.</p>
+      </div>
+      <div class="overview-steps">
+        <div class="overview-step">
+          <div class="overview-step-num">01</div>
+          <div>
+            <div class="overview-step-title">Discovery & Mapping</div>
+            <div class="overview-step-desc">We map your current lead flow, tools, and gaps. We identify every place revenue is leaking and design the system to seal it.</div>
+          </div>
+        </div>
+        <div class="overview-step">
+          <div class="overview-step-num">02</div>
+          <div>
+            <div class="overview-step-title">Agent Configuration</div>
+            <div class="overview-step-desc">Each agent is trained on your business — your tone, your offers, your objection handling, your calendar rules. Nothing is generic.</div>
+          </div>
+        </div>
+        <div class="overview-step">
+          <div class="overview-step-num">03</div>
+          <div>
+            <div class="overview-step-title">Integration & Testing</div>
+            <div class="overview-step-desc">We connect your CRM, website, ad platforms, and communication tools. We run live tests before anything touches a real lead.</div>
+          </div>
+        </div>
+        <div class="overview-step">
+          <div class="overview-step-num">04</div>
+          <div>
+            <div class="overview-step-title">Go Live & Monitor</div>
+            <div class="overview-step-desc">System goes live. You get a command interface via iMessage, WhatsApp, or SMS. We monitor, tune, and optimize ongoing.</div>
+          </div>
+        </div>
+        <div class="overview-step">
+          <div class="overview-step-num">05</div>
+          <div>
+            <div class="overview-step-title">Ongoing Optimization</div>
+            <div class="overview-step-desc">Your agents learn and improve. We run monthly reviews, adjust campaigns, refine messaging, and expand capabilities as your business grows.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AGENT DEEP DIVE ═══ -->
+<section class="agents-detail">
+  <div class="container">
+    <div class="agents-detail-header">
+      <div class="section-label">Your AI Team</div>
+      <h2>Six agents. Every<br>angle <em>covered.</em></h2>
+      <p class="agents-detail-sub">Each agent is purpose-built for a specific function and connected to every other agent in the system.</p>
+    </div>
+
+    <div class="agent-detail-card">
+      <div class="agent-detail-left">
+        <div class="agent-detail-num">01</div>
+        <div class="agent-detail-label">Agent 01 — Revenue</div>
+        <h3>Sales Agent</h3>
+        <p>Your fastest salesperson. Engages every new lead within 60 seconds — day or night. Qualifies intent, handles objections, and moves prospects through your pipeline without you lifting a finger. Personalized to your voice, trained on your offers.</p>
+      </div>
+      <div class="agent-detail-right">
+        <h4>What it does</h4>
+        <ul class="capability-list">
+          <li>Responds to every inbound lead within 60 seconds via SMS, email, or chat</li>
+          <li>Qualifies prospects using custom scoring based on your ideal client profile</li>
+          <li>Runs multi-touch follow-up sequences until a response or booking is secured</li>
+          <li>Manages pipeline stages in your CRM automatically</li>
+          <li>Tracks deal velocity and flags stalled opportunities for human review</li>
+          <li>Handles objections with trained, on-brand responses</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="agent-detail-card">
+      <div class="agent-detail-left">
+        <div class="agent-detail-num">02</div>
+        <div class="agent-detail-label">Agent 02 — Media</div>
+        <h3>Ad & Campaign Agent</h3>
+        <p>Manages your advertising intelligently. Monitors performance across platforms, shifts budget toward what's working, writes ad copy, and reports results — all without you logging into a dashboard. Your ad spend works harder around the clock.</p>
+      </div>
+      <div class="agent-detail-right">
+        <h4>What it does</h4>
+        <ul class="capability-list">
+          <li>Monitors Google, Meta, and other ad platforms continuously</li>
+          <li>Reallocates budget toward top-performing campaigns in real-time</li>
+          <li>Pauses underperforming ads before they drain your budget</li>
+          <li>Generates and rotates ad creative variants for A/B testing</li>
+          <li>Delivers plain-English performance summaries via text</li>
+          <li>Executes budget changes on your command via iMessage or SMS</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="agent-detail-card">
+      <div class="agent-detail-left">
+        <div class="agent-detail-num">03</div>
+        <div class="agent-detail-label">Agent 03 — Calendar</div>
+        <h3>Booking Agent</h3>
+        <p>Fills your calendar without back-and-forth. Books, confirms, reminds, reschedules, and recovers no-shows — fully automated. Your calendar stays full and your no-show rate drops significantly from day one.</p>
+      </div>
+      <div class="agent-detail-right">
+        <h4>What it does</h4>
+        <ul class="capability-list">
+          <li>Books appointments directly into your calendar in real-time</li>
+          <li>Sends automated confirmations via SMS and email</li>
+          <li>Runs reminder sequences 24h and 1h before every appointment</li>
+          <li>Re-engages no-shows with a same-day recovery sequence</li>
+          <li>Manages waitlists and fills cancellation slots automatically</li>
+          <li>Respects your availability rules and buffer times</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="agent-detail-card">
+      <div class="agent-detail-left">
+        <div class="agent-detail-num">04</div>
+        <div class="agent-detail-label">Agent 04 — Support</div>
+        <h3>Customer Service Agent</h3>
+        <p>Never leaves a customer waiting. Handles inquiries, resolves common issues, and routes complex situations to the right person — instantly, across every channel. Your customers feel taken care of. Your team handles only what actually needs them.</p>
+      </div>
+      <div class="agent-detail-right">
+        <h4>What it does</h4>
+        <ul class="capability-list">
+          <li>Responds to customer inquiries 24/7 across SMS, email, chat, and social</li>
+          <li>Draws from your knowledge base for accurate, context-aware answers</li>
+          <li>Escalates complex issues to the right team member automatically</li>
+          <li>Monitors customer satisfaction signals and flags at-risk accounts</li>
+          <li>Handles review requests and reputation management post-service</li>
+          <li>Runs reactivation campaigns for lapsed customers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="agent-detail-card">
+      <div class="agent-detail-left">
+        <div class="agent-detail-num">05</div>
+        <div class="agent-detail-label">Agent 05 — Social</div>
+        <h3>Social Media Agent</h3>
+        <p>Keeps your presence alive without consuming your time. Schedules content, engages with your audience, monitors mentions, and grows your following — continuously, in your brand voice. You stay top of mind without thinking about it.</p>
+      </div>
+      <div class="agent-detail-right">
+        <h4>What it does</h4>
+        <ul class="capability-list">
+          <li>Schedules and publishes content across Instagram, Facebook, LinkedIn, and more</li>
+          <li>Responds to comments and DMs in your brand voice</li>
+          <li>Monitors brand mentions and competitor activity</li>
+          <li>Identifies trending topics and content opportunities</li>
+          <li>Routes inbound social leads to the Sales Agent</li>
+          <li>Reports weekly on engagement, growth, and reach</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="agent-detail-card">
+      <div class="agent-detail-left">
+        <div class="agent-detail-num">06</div>
+        <div class="agent-detail-label">Agent 06 — Growth</div>
+        <h3>Outreach Agent</h3>
+        <p>Builds pipeline while you sleep. Researches ideal prospects, crafts personalized outreach, and runs multi-channel sequences across email and LinkedIn. When a prospect responds, the Sales Agent takes over seamlessly.</p>
+      </div>
+      <div class="agent-detail-right">
+        <h4>What it does</h4>
+        <ul class="capability-list">
+          <li>Identifies and researches prospects matching your ideal client profile</li>
+          <li>Writes personalized outreach based on prospect data and context</li>
+          <li>Runs multi-touch sequences across email and LinkedIn</li>
+          <li>Manages responses and hands warm leads to the Sales Agent</li>
+          <li>Tracks outreach performance and optimizes messaging</li>
+          <li>Maintains your prospect database clean and current</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ WHAT'S INCLUDED ═══ -->
+<section class="whats-included">
+  <div class="container">
+    <div class="section-label" style="justify-content:center;">Every Engagement Includes</div>
+    <h2 style="font-family:'Instrument Serif',serif;font-size:clamp(32px,4vw,48px);font-weight:400;text-align:center;line-height:1.1;margin-bottom:16px;">Built, installed, and <em style="font-style:italic;color:var(--accent);">running.</em></h2>
+    <p style="text-align:center;font-size:16px;color:var(--gray-3);max-width:520px;margin:0 auto;">We don't hand you a manual. We hand you a working system.</p>
+    <div class="included-grid">
+      <div class="included-item">
+        <div class="included-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8l3.5 3.5L14 4" stroke="#c8ff00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Full Setup & Installation</h3>
+        <p>We build and configure everything — CRM, agents, automations, integrations. You don't touch a single settings panel.</p>
+      </div>
+      <div class="included-item">
+        <div class="included-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8l3.5 3.5L14 4" stroke="#c8ff00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Agent Training</h3>
+        <p>Every agent is trained on your business, your voice, your offers, and your rules. Nothing generic leaves our hands.</p>
+      </div>
+      <div class="included-item">
+        <div class="included-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8l3.5 3.5L14 4" stroke="#c8ff00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Command Interface</h3>
+        <p>Control your entire AI operation via iMessage, WhatsApp, or SMS. No dashboards to learn. No new software to log into.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="services-cta">
+  <div class="container">
+    <h2>See it mapped to<br>your <em>business.</em></h2>
+    <p>In 30 minutes we'll show you the system live, walk through exactly how it applies to your operation, and give you a clear picture of what's possible.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-primary">Book a Walkthrough <span>→</span></a>
+      <a href="case-studies.html" class="btn-secondary">See Case Studies</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">Scale<span>.</span>Technics</a>
+        <p>Autonomous AI infrastructure for businesses that refuse to stand still. Vancouver, BC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="services.html">Services</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>System</h4>
+        <a href="/#system">24/7 Revenue System</a>
+        <a href="/#agents">AI Agents</a>
+        <a href="/#packages">Packages</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/company/110513984/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/scaletechnics/" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:hello@scaletechnics.com">hello@scaletechnics.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Scale Technics AI Solutions. All rights reserved.</p>
+      <p class="mono" style="font-size:12px;color:var(--gray-3);">Built with intelligence.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

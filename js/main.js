@@ -53,3 +53,34 @@ if (mobileToggle) {
     document.querySelector('.nav-links').classList.toggle('show');
   });
 }
+
+// ─── Sticky CTA ──────────────────────────────────────────────
+(function () {
+  const dismissed = sessionStorage.getItem('stickyCTAdismissed');
+  if (dismissed) return;
+
+  const el = document.createElement('div');
+  el.className = 'sticky-cta';
+  el.innerHTML = `
+    <div class="sticky-cta-inner">
+      <a href="/pages/contact.html" class="sticky-cta-btn">Book a Walkthrough <span>→</span></a>
+      <button class="sticky-cta-dismiss" aria-label="Dismiss">✕</button>
+    </div>`;
+  document.body.appendChild(el);
+
+  el.querySelector('.sticky-cta-dismiss').addEventListener('click', () => {
+    el.classList.remove('visible');
+    sessionStorage.setItem('stickyCTAdismissed', '1');
+  });
+
+  let shown = false;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500 && !shown) {
+      el.classList.add('visible');
+      shown = true;
+    } else if (window.scrollY < 200 && shown) {
+      el.classList.remove('visible');
+      shown = false;
+    }
+  }, { passive: true });
+})();

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Walkthrough — Scale Technics AI Solutions</title>
+<meta name="description" content="Book a 30-minute walkthrough with Scale Technics. We'll show you the AI revenue system live and map it to your business. Vancouver, BC.">
+<meta property="og:title" content="Book a Walkthrough — Scale Technics AI Solutions">
+<meta property="og:description" content="See the AI revenue system running live. 30 minutes. No pitch deck. Just the system applied to your business.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scaletechnics.com/pages/contact.html">
+<meta property="og:image" content="https://scaletechnics.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Book a Walkthrough — Scale Technics AI Solutions">
+<meta name="twitter:description" content="See the AI revenue system running live. 30 minutes. No pitch deck.">
+<meta name="twitter:image" content="https://scaletechnics.com/images/og-image.png">
+<link rel="canonical" href="https://scaletechnics.com/pages/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<style>
+  .contact-layout {
+    min-height: 100vh;
+    padding: 140px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-layout::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -300px;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+    position: relative; z-index: 2;
+  }
+
+  /* Left Column */
+  .contact-left {}
+  .page-hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-hero-label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .contact-left h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+  }
+  .contact-left h1 em { font-style: italic; color: var(--accent); }
+  .contact-left > p {
+    font-size: 17px;
+    color: var(--gray-4);
+    line-height: 1.7;
+    margin-bottom: 48px;
+    max-width: 440px;
+  }
+
+  /* What to expect */
+  .expect-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
+  .expect-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .expect-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    padding-top: 2px;
+    flex-shrink: 0;
+    width: 28px;
+  }
+  .expect-item h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .expect-item p { font-size: 13px; color: var(--gray-3); line-height: 1.5; }
+
+  /* Contact details */
+  .contact-details {
+    border-top: 1px solid var(--gray-2);
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contact-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 14px;
+    color: var(--gray-4);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-detail-item:hover { color: var(--white); }
+  .contact-detail-icon {
+    width: 36px; height: 36px;
+    background: var(--gray-1);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(200,255,0,0.6);
+    letter-spacing: 0;
+    flex-shrink: 0;
+  }
+
+  /* Right Column — Form */
+  .contact-form-wrap {
+    background: var(--gray-1);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 48px 44px;
+  }
+  .form-header {
+    margin-bottom: 36px;
+  }
+  .form-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .form-header h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .form-header h2 em { font-style: italic; color: var(--accent); }
+
+  /* Form Fields */
+  .contact-form { display: flex; flex-direction: column; gap: 20px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--black);
+    border: 1px solid var(--gray-2);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--white);
+    width: 100%;
+    transition: border-color 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+    cursor: pointer;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: rgba(200,255,0,0.4);
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--gray-3); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-group select option { background: var(--black); color: var(--white); }
+
+  .form-submit {
+    margin-top: 8px;
+  }
+  .form-submit .btn-primary {
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+    padding: 18px;
+  }
+  .form-note {
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--gray-3);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* Or Text */
+  .contact-or {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 8px 0;
+  }
+  .contact-or::before, .contact-or::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gray-2);
+  }
+  .contact-or span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+  }
+
+  /* Book direct button */
+  .book-direct {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    border: 1px solid var(--gray-2);
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.2s;
+    width: 100%;
+  }
+  .book-direct:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* FAQ strip */
+  .contact-faq {
+    padding: 80px 0;
+    border-top: 1px solid var(--gray-2);
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 48px;
+  }
+  .faq-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; }
+  .faq-item p { font-size: 14px; color: var(--gray-3); line-height: 1.6; }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .contact-form-wrap { padding: 32px 24px; }
+    .form-row { grid-template-columns: 1fr; }
+    .faq-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="/" class="logo">Scale<span>.</span>Technics</a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a Walkthrough</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact-layout">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left -->
+      <div class="contact-left">
+        <div class="page-hero-label">Book a Walkthrough</div>
+        <h1>See it running.<br>In <em>30 minutes.</em></h1>
+        <p>No pitch deck. No slides. We'll show you the actual system live — then map it to your specific business, your current tools, and the revenue you're leaving on the table.</p>
+
+        <ul class="expect-list">
+          <li class="expect-item">
+            <div class="expect-num">01</div>
+            <div>
+              <h4>We show you the system live</h4>
+              <p>You'll see real agents working in real-time — responding to leads, booking appointments, managing follow-up. Not a demo. The actual system.</p>
+            </div>
+          </li>
+          <li class="expect-item">
+            <div class="expect-num">02</div>
+            <div>
+              <h4>We map it to your operation</h4>
+              <p>We'll identify the exact points in your business where revenue is leaking and show you precisely how the system seals them.</p>
+            </div>
+          </li>
+          <li class="expect-item">
+            <div class="expect-num">03</div>
+            <div>
+              <h4>You leave with a clear picture</h4>
+              <p>No vague proposals. You'll know what the system looks like for your business, what it costs, and what it produces.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="contact-details">
+          <a href="mailto:hello@scaletechnics.com" class="contact-detail-item">
+            <div class="contact-detail-icon">@</div>
+            hello@scaletechnics.com
+          </a>
+          <a href="tel:+16045000171" class="contact-detail-item">
+            <div class="contact-detail-icon">+1</div>
+            (604) 500-0171
+          </a>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">BC</div>
+            Vancouver, BC — in-person available
+          </div>
+        </div>
+      </div>
+
+      <!-- Right — Form -->
+      <div class="contact-form-wrap">
+        <div class="form-header">
+          <div class="form-tag">Get in touch</div>
+          <h2>Tell us about<br>your <em>business.</em></h2>
+        </div>
+
+        <form class="contact-form" name="contact" method="POST" action="/pages/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="bot-field" style="display:none">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first_name" placeholder="Brad" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last_name" placeholder="Palmer" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(604) 000-0000">
+            </div>
+            <div class="form-group">
+              <label for="industry">Industry</label>
+              <select id="industry" name="industry" required>
+                <option value="" disabled selected>Select industry</option>
+                <option value="home-services">Home Services</option>
+                <option value="real-estate">Real Estate</option>
+                <option value="aesthetics">Aesthetics & Wellness</option>
+                <option value="professional-services">Professional Services</option>
+                <option value="auto">Auto Dealership</option>
+                <option value="healthcare">Healthcare & Dental</option>
+                <option value="hospitality">Hospitality</option>
+                <option value="ecommerce">E-Commerce & Retail</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="business">Business Name</label>
+            <input type="text" id="business" name="business_name" placeholder="Your Business Name">
+          </div>
+
+          <div class="form-group">
+            <label for="message">What's your biggest challenge right now?</label>
+            <textarea id="message" name="message" placeholder="Tell us what's happening — slow lead response, missed follow-ups, your team buried in admin..."></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-primary">Book Your Walkthrough <span>→</span></button>
+          </div>
+          <p class="form-note">We'll respond within 2 hours during business hours. Usually faster.</p>
+        </form>
+
+        <div class="contact-or">
+          <span>or</span>
+        </div>
+        <a href="sms:+16045000171" class="book-direct">
+          💬 Text us directly: (604) 500-0171
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="contact-faq">
+  <div class="container">
+    <div class="section-label">Common Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>How long does setup take?</h3>
+        <p>Most systems are fully live within 7–14 days. Discovery and configuration happen in the first week. We test before anything touches a real lead.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need to change my current tools?</h3>
+        <p>Usually not. We integrate with your existing CRM, calendar, and ad platforms where possible. If a tool needs replacing, we handle the transition.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does it cost?</h3>
+        <p>Pricing depends on which agents you need and the scope of integration. We'll give you exact numbers during the walkthrough — no vague quotes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this a SaaS subscription?</h3>
+        <p>No. You're not paying for access to a platform. You're paying for a built and installed system. There's an ongoing optimization retainer, but no per-seat licensing.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I'm not technical?</h3>
+        <p>Good. We build everything. You control the system through iMessage, WhatsApp, or SMS — channels you already use. No dashboards to learn.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I see it running before committing?</h3>
+        <p>That's what the walkthrough is for. You'll see the actual system live — not slides, not mockups. The real thing, applied to a real business scenario.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">Scale<span>.</span>Technics</a>
+        <p>Autonomous AI infrastructure for businesses that refuse to stand still. Vancouver, BC.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="services.html">Services</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>System</h4>
+        <a href="/#system">24/7 Revenue System</a>
+        <a href="/#agents">AI Agents</a>
+        <a href="/#packages">Packages</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/company/110513984/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/scaletechnics/" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:hello@scaletechnics.com">hello@scaletechnics.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Scale Technics AI Solutions. All rights reserved.</p>
+      <p class="mono" style="font-size:12px;color:var(--gray-3);">Built with intelligence.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

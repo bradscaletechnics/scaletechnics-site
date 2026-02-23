@@ -3,6 +3,13 @@
 [build]
   publish = "."
 
+# Redirect HTTP to HTTPS
+[[redirects]]
+  from = "http://scaletechnics.com/*"
+  to = "https://scaletechnics.com/:splat"
+  status = 301
+  force = true
+
 # Redirect www to root
 [[redirects]]
   from = "https://www.scaletechnics.com/*"
@@ -33,6 +40,12 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# 404 page
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
 
 # SPA-style fallback (if we add client-side routing later)
 # [[redirects]]
