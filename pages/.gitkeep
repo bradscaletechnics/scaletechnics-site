@@ -1,0 +1,3 @@
+# Pages Directory
+Additional pages go here (case studies, blog posts, vertical landing pages).
+Reference CSS/JS with relative paths: `../css/main.css` and `../js/main.js`.
