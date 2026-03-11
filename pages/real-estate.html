@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agents for Real Estate Agents — ScaleTechnics Vancouver</title>
+<meta name="description" content="ScaleTechnics installs AI agents into Vancouver real estate practices. 60-second lead response, automated FINTRAC compliance, condition deadline tracking, and past client nurture. Recover every missed commission.">
+<meta property="og:title" content="AI Agents for Vancouver Realtors — ScaleTechnics">
+<meta property="og:description" content="In Vancouver's $1.2M+ market, one recovered lead pays for everything. ScaleTechnics Real Estate Agent responds in 60 seconds, handles FINTRAC, and tracks every condition deadline automatically.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scaletechnics.com/pages/real-estate.html">
+<meta property="og:image" content="https://scaletechnics.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://scaletechnics.com/pages/real-estate.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<style>
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -300px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-hero-label::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+  .page-hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(40px, 5.5vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+    max-width: 820px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero-sub {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--gray-4);
+    line-height: 1.6;
+    max-width: 620px;
+    margin-bottom: 48px;
+  }
+  .stat-row { display: flex; gap: 24px; flex-wrap: wrap; }
+  .stat-chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    background: rgba(200,255,0,0.07);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 40px;
+    padding: 8px 18px;
+  }
+  .stat-chip strong { font-weight: 700; }
+
+  /* ── SECTION SHELL ── */
+  .vt-section { padding: 100px 0; border-top: 1px solid var(--gray-2); }
+  .vt-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .vt-label::before { content: ''; width: 16px; height: 1px; background: var(--accent); }
+  .vt-h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 48px;
+    max-width: 640px;
+  }
+  .vt-h2 em { font-style: italic; color: var(--accent); }
+
+  /* ── PAIN CARD ── */
+  .pain-card {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 44px;
+  }
+  .pain-card ul { list-style: none; padding: 0; }
+  .pain-card ul li {
+    font-size: 16px;
+    color: var(--gray-4);
+    line-height: 1.65;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-2);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .pain-card ul li:last-child { border-bottom: none; }
+  .pain-card ul li::before { content: '▸'; color: var(--accent); flex-shrink: 0; margin-top: 2px; font-size: 11px; }
+
+  /* ── BEFORE / AFTER ── */
+  .transform-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 4px;
+  }
+  .transform-header-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    color: var(--gray-3);
+  }
+  .transform-header-label.after { color: #34d399; }
+  .transform-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 12px;
+    margin-bottom: 6px;
+    overflow: hidden;
+  }
+  .transform-cell { padding: 18px 20px; }
+  .transform-cell.topic { border-right: 1px solid var(--gray-2); display: flex; align-items: center; }
+  .transform-cell.topic span { font-size: 13px; font-weight: 600; color: var(--white); }
+  .transform-cell.before-cell { border-right: 1px solid var(--gray-2); }
+  .transform-cell.before-cell p { font-size: 13px; color: var(--gray-3); line-height: 1.5; }
+  .transform-cell.after-cell p { font-size: 13px; color: #34d399; line-height: 1.5; }
+  .cell-sub { font-size: 11px; color: #555; margin-top: 4px; font-style: italic; }
+  .cell-sub.green { color: #059669; }
+
+  /* ── METRICS ── */
+  .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .metric-box { background: var(--gray-1); border: 1px solid var(--gray-2); border-radius: 14px; padding: 36px 20px; text-align: center; }
+  .metric-value { font-family: 'Instrument Serif', serif; font-size: 48px; font-weight: 400; color: var(--accent); line-height: 1; margin-bottom: 10px; }
+  .metric-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gray-3); text-transform: uppercase; letter-spacing: 1px; line-height: 1.4; }
+
+  /* ── QUOTE ── */
+  .quote-card {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 16px 16px 0;
+    padding: 40px 48px;
+    position: relative;
+  }
+  .quote-mark { font-family: 'Instrument Serif', serif; font-size: 80px; color: var(--gray-2); line-height: 1; position: absolute; top: 16px; left: 32px; user-select: none; }
+  .quote-text { font-family: 'Instrument Serif', serif; font-size: 20px; font-style: italic; color: var(--white); line-height: 1.65; padding-top: 16px; margin-bottom: 20px; }
+  .quote-attr { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+  .quote-note { font-size: 11px; color: #444; margin-top: 12px; }
+
+  /* ── CAPABILITIES ── */
+  .caps-list { list-style: none; padding: 0; }
+  .caps-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--gray-2);
+    font-size: 15px;
+    color: var(--gray-4);
+    line-height: 1.65;
+  }
+  .caps-list li:last-child { border-bottom: none; }
+  .cap-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    background: rgba(200,255,0,0.08);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  /* ── MARKET CALLOUT ── */
+  .callout-card {
+    background: var(--gray-1);
+    border: 1px solid rgba(200,255,0,0.15);
+    border-top: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 44px;
+  }
+  .callout-badge {
+    display: inline-block;
+    background: rgba(200,255,0,0.1);
+    border: 1px solid rgba(200,255,0,0.25);
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+  }
+  .callout-card h3 { font-family: 'Instrument Serif', serif; font-size: 28px; font-weight: 400; color: var(--white); margin-bottom: 14px; letter-spacing: -0.5px; }
+  .callout-card p { font-size: 15px; color: var(--gray-4); line-height: 1.7; }
+
+  /* ── FINTRAC CARD ── */
+  .fintrac-card {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-left: 3px solid #34d399;
+    border-radius: 16px;
+    padding: 40px 44px;
+  }
+  .fintrac-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #34d399;
+    margin-bottom: 14px;
+  }
+  .fintrac-card h3 { font-family: 'Instrument Serif', serif; font-size: 26px; font-weight: 400; color: var(--white); margin-bottom: 14px; line-height: 1.2; }
+  .fintrac-card p { font-size: 15px; color: var(--gray-4); line-height: 1.7; }
+  .fintrac-card p strong { color: #34d399; }
+
+  /* ── CTA ── */
+  .vt-cta {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 20px;
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .vt-cta::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .vt-cta h2 { font-family: 'Instrument Serif', serif; font-size: clamp(30px, 4vw, 52px); font-weight: 400; line-height: 1.1; letter-spacing: -1px; margin-bottom: 18px; }
+  .vt-cta h2 em { font-style: italic; color: var(--accent); }
+  .vt-cta p { font-size: 17px; color: var(--gray-4); line-height: 1.6; max-width: 520px; margin: 0 auto 44px; }
+
+  /* ── FOOTER ── */
+  .page-footer { border-top: 1px solid var(--gray-2); padding: 48px 0; }
+  .page-footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .page-footer-logo { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gray-3); }
+  .page-footer-text { font-size: 12px; color: #333; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .page-hero { padding: 120px 0 70px; }
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    .transform-header { display: none; }
+    .transform-row { grid-template-columns: 1fr; }
+    .transform-cell.topic { border-right: none; border-bottom: 1px solid var(--gray-2); }
+    .transform-cell.before-cell { border-right: none; border-bottom: 1px solid var(--gray-2); }
+    .vt-cta { padding: 50px 28px; }
+    .pain-card, .quote-card, .callout-card, .fintrac-card { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">Scale<span>.</span>Technics</a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a Walkthrough</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">Real Estate Vertical</div>
+    <h1>The lead went cold while you<br>were at a <em>showing.</em></h1>
+    <p class="page-hero-sub">In Vancouver's $1.2M+ average market, a slow lead response doesn't cost you a commission — it costs you $30,000+. The Real Estate Agent responds in 60 seconds, qualifies the lead, and books the showing before you've finished your last appointment.</p>
+    <div class="stat-row">
+      <div class="stat-chip"><strong>$1.2M+</strong> Average Vancouver Transaction</div>
+      <div class="stat-chip"><strong>72hr</strong> window before leads go cold</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE PROBLEM ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">The Problem</div>
+    <h2 class="vt-h2">If you're a Vancouver realtor,<br>this is your <em>week:</em></h2>
+    <div class="pain-card">
+      <ul>
+        <li>A Realtor.ca lead came in at 7pm while you were at a showing. You replied at 10pm. They'd already booked with another agent.</li>
+        <li>FINTRAC paperwork for a corporate buyer took 4 hours. You did it manually. Again.</li>
+        <li>You have 200 past clients who haven't heard from you in over a year. Some of them are selling right now — using someone else.</li>
+        <li>A financing condition expired on a listing. You found out when the buyer's agent called, not before.</li>
+        <li>Your last 3 closings never got review requests. You have 2 Google reviews. Your competitor has 47.</li>
+        <li>You spent Sunday evening writing market update emails that should have been automated.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRANSFORMATION ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">The Transformation</div>
+    <h2 class="vt-h2">Here's what <em>changes.</em></h2>
+
+    <div class="transform-header">
+      <div class="transform-header-label">Area</div>
+      <div class="transform-header-label">Before</div>
+      <div class="transform-header-label after">After the Real Estate Agent</div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Lead Response</span></div>
+      <div class="transform-cell before-cell">
+        <p>4+ hours, already moved on</p>
+        <p class="cell-sub">Lead went to whoever replied first — and it wasn't you</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>&lt;60 seconds, qualified and showing booked</p>
+        <p class="cell-sub green">Hot leads escalated to you — all you need to do is close</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>FINTRAC</span></div>
+      <div class="transform-cell before-cell">
+        <p>4 hours manual per corporate buyer</p>
+        <p class="cell-sub">ID collection, beneficial ownership — all done by hand</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Automated workflow, compliant in 20 minutes</p>
+        <p class="cell-sub green">Two-document method, PEP screening, beneficial ownership — handled automatically</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Past Client Nurture</span></div>
+      <div class="transform-cell before-cell">
+        <p>Out of sight, out of mind</p>
+        <p class="cell-sub">200 past clients drifting away every month with zero contact</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Automated anniversary touchpoints, market updates, warm referrals</p>
+        <p class="cell-sub green">Your past clients think of you first — because you stayed in touch</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Condition Deadlines</span></div>
+      <div class="transform-cell before-cell">
+        <p>Calendar reminders, easy to miss</p>
+        <p class="cell-sub">Subject removal dates found out about after expiry</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Multi-stage alerts at 5 days / 48hrs / 24hrs / 6hrs</p>
+        <p class="cell-sub green">Never miss a financing condition, inspection deadline, or subject removal again</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Reviews</span></div>
+      <div class="transform-cell before-cell">
+        <p>You forget to ask, clients forget to leave</p>
+        <p class="cell-sub">2 Google reviews. Your competitor has 47.</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Automated request 7 days post-close, 40% more reviews</p>
+        <p class="cell-sub green">Every closing generates a review request — on the right timeline</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Market Reports</span></div>
+      <div class="transform-cell before-cell">
+        <p>Sunday night manual writing</p>
+        <p class="cell-sub">Hours spent building reports that only go to a fraction of your database</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Auto-generated by neighbourhood and property type, sent monthly</p>
+        <p class="cell-sub green">Your entire database gets personalized market updates — zero effort</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METRICS ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">By the Numbers</div>
+    <div class="metrics-grid">
+      <div class="metric-box">
+        <div class="metric-value">&lt;60s</div>
+        <div class="metric-label">Lead Response Time</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">100%</div>
+        <div class="metric-label">FINTRAC Compliance Rate</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">−60%</div>
+        <div class="metric-label">Admin Time Per Deal</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">$30K+</div>
+        <div class="metric-label">Commission Per Recovered Lead</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUOTE ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="quote-card">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">I recovered three leads in the first month that I would have lost — two from after-hours responses and one from a follow-up sequence. That's over $75K in commissions from one tool.</p>
+      <div class="quote-attr">Vancouver Realtor — REBGV Member</div>
+      <div class="quote-note">* Illustrative based on realtor outcomes using automated lead response and follow-up workflows.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CAPABILITIES ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">Capabilities</div>
+    <h2 class="vt-h2">The Real Estate Agent runs your <em>entire back office.</em></h2>
+    <ul class="caps-list">
+      <li>
+        <div class="cap-num">01</div>
+        <span>Responds to every lead within 60 seconds — Realtor.ca, website, referrals — qualifies timeline, budget, and buying criteria, then books showings automatically. You only get involved when it's time to close.</span>
+      </li>
+      <li>
+        <div class="cap-num">02</div>
+        <span>Automates FINTRAC identity verification for every buyer — two-document method, PEP screening, corporate beneficial ownership records. Every transaction is compliant before it proceeds. Zero manual paperwork.</span>
+      </li>
+      <li>
+        <div class="cap-num">03</div>
+        <span>Manages listing preparation workflows from shoot to go-live — photographer scheduling, stager coordination, MLS data validation, open house scheduling, showing confirmations, and buyer feedback collection.</span>
+      </li>
+      <li>
+        <div class="cap-num">04</div>
+        <span>Tracks all condition deadlines with multi-stage alerts — financing, inspection, title, and subject removal dates. Alerts fire at 5 days, 48 hours, 24 hours, and 6 hours. Nothing slips through.</span>
+      </li>
+      <li>
+        <div class="cap-num">05</div>
+        <span>Keeps 200+ past clients warm with purchase anniversary check-ins, personalized market updates, and review requests after every closing. Your database becomes a referral engine — automatically.</span>
+      </li>
+      <li>
+        <div class="cap-num">06</div>
+        <span>Generates neighbourhood market reports and sends them to your database monthly by area and property type. Your clients think of you as their market expert — because you're always in their inbox with value.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ VANCOUVER MARKET ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="callout-card">
+      <div class="callout-badge">Vancouver Market</div>
+      <h3>One recovered lead pays for everything.</h3>
+      <p>Vancouver's average home price is $1.2M+. One recovered lead is $25,000–$50,000+ in commission. The Real Estate Agent pays for itself the first time it responds while you're at a showing. Every lead it catches after that is pure upside — and it never sleeps, never forgets to follow up, and never misses a condition deadline.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FINTRAC CALLOUT ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="fintrac-card">
+      <div class="fintrac-label">Compliance Alert</div>
+      <h3>FINTRAC compliance is mandatory.<br>The penalties are real.</h3>
+      <p>FINTRAC compliance is mandatory for every Canadian realtor. <strong>Bill C-2 has expanded the requirements</strong> — identity verification for every buyer and seller, beneficial ownership records for corporate purchasers, PEP screening, and suspicious transaction reporting obligations. <strong>Penalties reach $2M for non-compliance.</strong> The Real Estate Agent handles all of it automatically, for every transaction, from the first contact. No gaps, no exceptions, no manual paperwork.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-cta">
+      <h2>How many leads did you miss<br><em>last month?</em></h2>
+      <p>Book a 20-minute demo. We'll show you the 60-second lead response in action and walk through how FINTRAC gets handled automatically — live, on your actual workflow.</p>
+      <a href="contact.html" class="btn">Book a Demo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="page-footer-inner">
+      <div class="page-footer-logo">ScaleTechnics</div>
+      <div class="page-footer-text">Real Estate Vertical · Vancouver, BC · © 2026 ScaleTechnics</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
