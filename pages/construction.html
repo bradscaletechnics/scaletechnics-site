@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agents for Construction Companies — ScaleTechnics Vancouver</title>
+<meta name="description" content="ScaleTechnics installs AI agents into Canadian construction and procurement operations. Automate tender monitoring on Merx, BC Bid, and Central Tenders. Cut bid prep time by 60%. Zero missed WorkSafe BC deadlines.">
+<meta property="og:title" content="AI Agents for Construction Companies — ScaleTechnics">
+<meta property="og:description" content="Canadian construction companies lose bids they never knew existed. ScaleTechnics Construction Agent monitors Merx, BC Bid, and Central Tenders 24/7 — and pre-builds your bids automatically.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scaletechnics.com/pages/construction.html">
+<meta property="og:image" content="https://scaletechnics.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://scaletechnics.com/pages/construction.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<style>
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -300px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-hero-label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .page-hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(40px, 5.5vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+    max-width: 820px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero-sub {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--gray-4);
+    line-height: 1.6;
+    max-width: 580px;
+    margin-bottom: 48px;
+  }
+  .stat-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .stat-chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    background: rgba(200,255,0,0.07);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 40px;
+    padding: 8px 18px;
+  }
+  .stat-chip strong { font-weight: 700; }
+
+  /* ── SECTION SHELL ── */
+  .vt-section {
+    padding: 100px 0;
+    border-top: 1px solid var(--gray-2);
+  }
+  .vt-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .vt-label::before { content: ''; width: 16px; height: 1px; background: var(--accent); }
+  .vt-h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 48px;
+    max-width: 640px;
+  }
+  .vt-h2 em { font-style: italic; color: var(--accent); }
+
+  /* ── PAIN CARD ── */
+  .pain-card {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 44px;
+  }
+  .pain-card ul { list-style: none; padding: 0; }
+  .pain-card ul li {
+    font-size: 16px;
+    color: var(--gray-4);
+    line-height: 1.65;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-2);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .pain-card ul li:last-child { border-bottom: none; }
+  .pain-card ul li::before {
+    content: '▸';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 11px;
+  }
+
+  /* ── BEFORE / AFTER TABLE ── */
+  .transform-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 4px;
+  }
+  .transform-header-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    color: var(--gray-3);
+  }
+  .transform-header-label.after { color: #34d399; }
+
+  .transform-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 12px;
+    margin-bottom: 6px;
+    overflow: hidden;
+  }
+  .transform-cell { padding: 18px 20px; }
+  .transform-cell.topic {
+    border-right: 1px solid var(--gray-2);
+    display: flex;
+    align-items: center;
+  }
+  .transform-cell.topic span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.2px;
+  }
+  .transform-cell.before-cell { border-right: 1px solid var(--gray-2); }
+  .transform-cell.before-cell p { font-size: 13px; color: var(--gray-3); line-height: 1.5; }
+  .transform-cell.after-cell p { font-size: 13px; color: #34d399; line-height: 1.5; }
+  .cell-sub { font-size: 11px; color: #555; margin-top: 4px; font-style: italic; }
+  .cell-sub.green { color: #059669; }
+
+  /* ── METRICS ── */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .metric-box {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 14px;
+    padding: 36px 20px;
+    text-align: center;
+  }
+  .metric-value {
+    font-family: 'Instrument Serif', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .metric-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+
+  /* ── QUOTE ── */
+  .quote-card {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 16px 16px 0;
+    padding: 40px 48px;
+    position: relative;
+  }
+  .quote-mark {
+    font-family: 'Instrument Serif', serif;
+    font-size: 80px;
+    color: var(--gray-2);
+    line-height: 1;
+    position: absolute;
+    top: 16px; left: 32px;
+    user-select: none;
+  }
+  .quote-text {
+    font-family: 'Instrument Serif', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.65;
+    padding-top: 16px;
+    margin-bottom: 20px;
+  }
+  .quote-attr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .quote-note { font-size: 11px; color: #444; margin-top: 12px; }
+
+  /* ── CAPABILITIES LIST ── */
+  .caps-list { list-style: none; padding: 0; }
+  .caps-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--gray-2);
+    font-size: 15px;
+    color: var(--gray-4);
+    line-height: 1.65;
+  }
+  .caps-list li:last-child { border-bottom: none; }
+  .cap-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    background: rgba(200,255,0,0.08);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  /* ── CALLOUT CARD ── */
+  .callout-card {
+    background: var(--gray-1);
+    border: 1px solid rgba(200,255,0,0.15);
+    border-top: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 44px;
+  }
+  .callout-badge {
+    display: inline-block;
+    background: rgba(200,255,0,0.1);
+    border: 1px solid rgba(200,255,0,0.25);
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+  }
+  .callout-card h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+  .callout-card p { font-size: 15px; color: var(--gray-4); line-height: 1.7; }
+  .portal-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .portal-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--accent);
+    background: rgba(200,255,0,0.07);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 6px;
+    padding: 5px 12px;
+  }
+
+  /* ── CTA ── */
+  .vt-cta {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 20px;
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .vt-cta::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .vt-cta h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(30px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+  }
+  .vt-cta h2 em { font-style: italic; color: var(--accent); }
+  .vt-cta p { font-size: 17px; color: var(--gray-4); line-height: 1.6; max-width: 520px; margin: 0 auto 44px; }
+
+  /* ── FOOTER OVERRIDE ── */
+  .page-footer {
+    border-top: 1px solid var(--gray-2);
+    padding: 48px 0;
+  }
+  .page-footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .page-footer-logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+  }
+  .page-footer-text { font-size: 12px; color: #333; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .page-hero { padding: 120px 0 70px; }
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    .transform-header { display: none; }
+    .transform-row { grid-template-columns: 1fr; }
+    .transform-cell.topic { border-right: none; border-bottom: 1px solid var(--gray-2); }
+    .transform-cell.before-cell { border-right: none; border-bottom: 1px solid var(--gray-2); }
+    .vt-cta { padding: 50px 28px; }
+    .pain-card { padding: 28px 24px; }
+    .quote-card { padding: 32px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">Scale<span>.</span>Technics</a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a Walkthrough</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">Construction Vertical</div>
+    <h1>You're losing bids<br>you never even <em>knew existed.</em></h1>
+    <p class="page-hero-sub">Canadian construction companies miss tenders posted while they're on site, spend 20+ hours per bid on manual prep, and lose money on change orders nobody documented. The Construction Agent fixes all three.</p>
+    <div class="stat-row">
+      <div class="stat-chip"><strong>20+</strong> hours per bid on manual prep</div>
+      <div class="stat-chip"><strong>60%</strong> faster bid turnaround with AI</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE PROBLEM ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">The Problem</div>
+    <h2 class="vt-h2">If you run a construction company in Canada, <em>this is your week:</em></h2>
+    <div class="pain-card">
+      <ul>
+        <li>Tenders on Merx, BC Bid, and Central Tenders posted while you're on site — you find out three days later when the window is half closed.</li>
+        <li>20 hours of manual bid prep per job: spec extraction, subcontractor coordination, material pricing cross-checks. Repeat for every submission.</li>
+        <li>WorkSafe BC compliance documentation pulled together by whoever's available — which means whoever's least billable.</li>
+        <li>Subcontractor insurance certificates expiring mid-project. You find out at the worst possible time — when a site inspector shows up.</li>
+        <li>Change orders tracked across email threads. Disputes happen because nobody can find the original scope language from three months ago.</li>
+        <li>Payroll runs late because site timesheets come in three different formats from three different crews and someone has to reconcile them by hand.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRANSFORMATION ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">The Transformation</div>
+    <h2 class="vt-h2">Here's what <em>changes.</em></h2>
+
+    <div class="transform-header">
+      <div class="transform-header-label">Area</div>
+      <div class="transform-header-label">Before</div>
+      <div class="transform-header-label after">After the Construction Agent</div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Tender Discovery</span></div>
+      <div class="transform-cell before-cell">
+        <p>Checking Merx manually, twice a week</p>
+        <p class="cell-sub">Missing opportunities posted between check-ins</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Real-time alerts within 15 min of every matching tender posting</p>
+        <p class="cell-sub green">Merx, BC Bid, and Central Tenders all monitored 24/7</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Bid Preparation</span></div>
+      <div class="transform-cell before-cell">
+        <p>20+ hours of manual extraction and pricing per bid</p>
+        <p class="cell-sub">Estimators tied up, other projects suffer</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>AI pre-populates 80% of the bid from specs and historical precedent</p>
+        <p class="cell-sub green">You review and approve — not assemble from scratch</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>WorkSafe Compliance</span></div>
+      <div class="transform-cell before-cell">
+        <p>One admin managing paper forms and scattered filing</p>
+        <p class="cell-sub">Audit exposure every time a deadline slips</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Auto-generated safety documentation, always audit-ready</p>
+        <p class="cell-sub green">Zero scramble before WorkSafe inspections</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Subcontractor Certs</span></div>
+      <div class="transform-cell before-cell">
+        <p>Expiry dates in a spreadsheet, reviewed quarterly if remembered</p>
+        <p class="cell-sub">Mid-project surprises that halt work</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Automated tracking, 30-day renewal alerts per subcontractor</p>
+        <p class="cell-sub green">Every cert renewed before it becomes a site problem</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Change Orders</span></div>
+      <div class="transform-cell before-cell">
+        <p>Email chains, verbal agreements, retroactive disputes</p>
+        <p class="cell-sub">Losing money on work you can't prove you approved</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Centralized log, auto-timestamped, tied to original contract scope</p>
+        <p class="cell-sub green">Every change documented, signed off, and traceable</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Project Reporting</span></div>
+      <div class="transform-cell before-cell">
+        <p>End-of-week scramble to pull together a status update</p>
+        <p class="cell-sub">GCs and owners always chasing you for updates</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Real-time dashboard, automated weekly summary delivered every Friday</p>
+        <p class="cell-sub green">You look like the most organized contractor on every job</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METRICS ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">By the Numbers</div>
+    <div class="metrics-grid">
+      <div class="metric-box">
+        <div class="metric-value">−60%</div>
+        <div class="metric-label">Bid Prep Time</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">24/7</div>
+        <div class="metric-label">Tender Monitoring — Merx, BC Bid, Central Tenders</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">Zero</div>
+        <div class="metric-label">Missed WorkSafe Deadlines</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">3×</div>
+        <div class="metric-label">More Bids Submitted Per Month</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUOTE ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="quote-card">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">We went from submitting 4 bids a month to 11. The agent monitors all three portals and has the pre-fill done before I even open the file.</p>
+      <div class="quote-attr">General Contractor — BC Lower Mainland</div>
+      <div class="quote-note">* Illustrative based on contractor outcomes using automated tender monitoring and bid workflows.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CAPABILITIES ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">Capabilities</div>
+    <h2 class="vt-h2">The Construction Agent runs your <em>ops layer end to end.</em></h2>
+    <ul class="caps-list">
+      <li>
+        <div class="cap-num">01</div>
+        <span>Monitors Merx, BC Bid, and Central Tenders 24/7 — alerts on every matching opportunity within minutes of posting, filtered to your trade category and region.</span>
+      </li>
+      <li>
+        <div class="cap-num">02</div>
+        <span>Pre-populates bid documents from spec sheets using AI extraction — pulls quantities, scope language, and exclusions automatically. You review, not rebuild.</span>
+      </li>
+      <li>
+        <div class="cap-num">03</div>
+        <span>Tracks all WorkSafe BC obligations: safety programs, incident reporting, NCSO certification renewals, and site-specific safety plans — generated and filed automatically.</span>
+      </li>
+      <li>
+        <div class="cap-num">04</div>
+        <span>Manages your full subcontractor database: insurance certificates, WCB clearance letters, expiry dates, and performance history — 30-day alerts before anything lapses.</span>
+      </li>
+      <li>
+        <div class="cap-num">05</div>
+        <span>Logs every change order with timestamp, original scope reference, dollar amount, and client sign-off status — full audit trail, no disputes about what was agreed.</span>
+      </li>
+      <li>
+        <div class="cap-num">06</div>
+        <span>Generates weekly project status reports automatically — progress vs. schedule, open RFIs, upcoming milestones, and subcontractor status delivered every Friday morning.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ CENTRAL TENDERS CALLOUT ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="callout-card">
+      <div class="callout-badge">Native Integration</div>
+      <h3>Powered by Central Tenders</h3>
+      <p>ScaleTechnics built Central Tenders — Canada's modern procurement platform. The Construction Agent is natively integrated, which means it doesn't just monitor the portal — it's connected to the infrastructure underneath it. When a matching tender drops on Central Tenders, your agent knows before your competitors check their inbox.</p>
+      <div class="portal-tags">
+        <div class="portal-tag">Central Tenders</div>
+        <div class="portal-tag">Merx</div>
+        <div class="portal-tag">BC Bid</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-cta">
+      <h2>How many tenders did you<br>miss <em>last month?</em></h2>
+      <p>Book a 20-minute demo. We'll pull up live tenders in your region and show you exactly what you've been missing — in real time, during the call.</p>
+      <a href="contact.html" class="btn">Book a Demo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="page-footer-inner">
+      <div class="page-footer-logo">ScaleTechnics</div>
+      <div class="page-footer-text">Construction Vertical · Vancouver, BC · © 2026 ScaleTechnics</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
