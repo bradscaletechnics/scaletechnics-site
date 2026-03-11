@@ -31,7 +31,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-document.querySelectorAll('.problem-list li, .agent-card, .pkg-card, .pipeline-step, .timeline-item').forEach(el => {
+document.querySelectorAll('.problem-list li, .pkg-card, .pipeline-step, .timeline-item').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out, border-color 0.3s';
@@ -39,12 +39,70 @@ document.querySelectorAll('.problem-list li, .agent-card, .pkg-card, .pipeline-s
 });
 
 // ─── Stagger animations ──────────────────────────────────────
-document.querySelectorAll('.agents-grid .agent-card').forEach((card, i) => {
-  card.style.transitionDelay = `${i * 0.08}s`;
-});
 document.querySelectorAll('.pipeline-step').forEach((step, i) => {
   step.style.transitionDelay = `${i * 0.1}s`;
 });
+
+// ─── Agent character-select filter tabs ──────────────────────
+(function () {
+  const tabs = document.querySelectorAll('.agent-tab');
+  const cards = document.querySelectorAll('.char-card');
+  if (!tabs.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const filter = tab.dataset.filter;
+      const track = document.getElementById('agentTrack');
+
+      cards.forEach(card => {
+        const cat = card.dataset.cat;
+        if (filter === 'all' || cat === filter) {
+          card.classList.remove('agent-hidden');
+        } else {
+          card.classList.add('agent-hidden');
+        }
+      });
+
+      // Scroll back to start on filter change
+      if (track) track.scrollLeft = 0;
+    });
+  });
+})();
+
+// ─── Agent scroll drag-to-scroll ─────────────────────────────
+(function () {
+  const track = document.getElementById('agentTrack');
+  if (!track) return;
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  track.addEventListener('mousedown', e => {
+    isDown = true;
+    track.classList.add('dragging');
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
+  });
+  track.addEventListener('mouseleave', () => {
+    isDown = false;
+    track.classList.remove('dragging');
+  });
+  track.addEventListener('mouseup', () => {
+    isDown = false;
+    track.classList.remove('dragging');
+  });
+  track.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    const walk = (x - startX) * 1.6;
+    track.scrollLeft = scrollLeft - walk;
+  });
+})();
 
 // ─── Mobile nav toggle ───────────────────────────────────────
 const mobileToggle = document.querySelector('.mobile-toggle');
