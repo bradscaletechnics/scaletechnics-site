@@ -53,6 +53,12 @@
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
+.vert-card-link { display: block; text-decoration: none; color: inherit; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+.vert-card-link:hover { border-color: rgba(200,255,0,0.3); transform: translateY(-2px); }
+.vert-learn { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--accent); margin-top: 16px; opacity: 0.7; transition: opacity 0.2s; }
+.vert-card-link:hover .vert-learn { opacity: 1; }
+.vert-soon-badge { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; background: rgba(200,255,0,0.1); border: 1px solid rgba(200,255,0,0.2); color: var(--accent); padding: 2px 8px; border-radius: 4px; vertical-align: middle; margin-left: 8px; }
+.vert-card-soon { opacity: 0.6; }
 .leaflet-control-attribution { background: rgba(10,10,10,0.8) !important; color: rgba(255,255,255,0.2) !important; font-size: 9px !important; border-radius: 4px 0 0 0 !important; }
 .leaflet-control-attribution a { color: rgba(255,255,255,0.25) !important; }
 .st-marker-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
@@ -88,7 +94,7 @@
         <span>Autonomous AI Infrastructure</span>
       </div>
       <h1>Your business<br>never <em>sleeps</em> again.</h1>
-      <p class="hero-sub">We install autonomous AI agents directly into your operations — selling, following up, booking, running ads, and managing customers around the clock. Not another software subscription. A revenue system that works while you don't.</p>
+      <p class="hero-sub">We build and install autonomous AI agents directly into your business — 60-second lead response, AI-managed ad campaigns, 24/7 booking, and intelligent follow-up that never stops. Not a SaaS subscription. Permanent revenue infrastructure, installed into how you already operate.</p>
       <div class="hero-actions">
         <a href="/pages/contact.html" class="btn-primary">See It In Action <span>→</span></a>
         <a href="#system" class="btn-secondary">How It Works</a>
@@ -451,52 +457,58 @@
       <p class="verticals-sub">Our agents are pre-trained on industry-specific workflows, compliance requirements, and language. Not generic bots — vertical specialists.</p>
     </div>
     <div class="verticals-grid">
-      <div class="vert-card">
+      <a href="/pages/finance.html" class="vert-card vert-card-link">
         <span class="vert-icon">💼</span>
         <div class="vert-name">Finance & Insurance</div>
-        <p class="vert-pain">Compliance-aware intake, suitability tracking, and client management built for regulated advisors and wealth managers.</p>
+        <p class="vert-pain">KYC/KYP intake automated, FINTRAC obligations tracked, CASL consent managed. Your advisors spend 40% less time on admin — and 40% more time closing.</p>
         <div class="vert-tag">Finance · Insurance · Wealth Management</div>
-      </div>
-      <div class="vert-card">
+        <div class="vert-learn">See Finance Agent →</div>
+      </a>
+      <a href="/pages/construction.html" class="vert-card vert-card-link">
         <span class="vert-icon">🏗️</span>
         <div class="vert-name">Construction & Procurement</div>
-        <p class="vert-pain">Tender monitoring, bid management, and supplier coordination — so your team wins more work with less overhead.</p>
+        <p class="vert-pain">Merx, BC Bid, and Central Tenders monitored 24/7. Bid prep cut by 60%. WorkSafe BC deadlines never missed. 3× more bids submitted per month.</p>
         <div class="vert-tag">Construction · Procurement · Project Management</div>
-      </div>
-      <div class="vert-card">
+        <div class="vert-learn">See Construction Agent →</div>
+      </a>
+      <a href="/pages/film.html" class="vert-card vert-card-link">
         <span class="vert-icon">🎬</span>
         <div class="vert-name">Film & Production</div>
-        <p class="vert-pain">Crew scheduling, payroll automation, and location logistics for Vancouver's booming film industry.</p>
+        <p class="vert-pain">Average Vancouver production leaves $1.8M+ in BC tax credits unclaimed. The Film Agent tracks every qualifying dollar across all 4 unions — in real time.</p>
         <div class="vert-tag">Film · Production · Entertainment</div>
-      </div>
-      <div class="vert-card">
+        <div class="vert-learn">See Film Agent →</div>
+      </a>
+      <a href="/pages/compliance.html" class="vert-card vert-card-link">
         <span class="vert-icon">📋</span>
         <div class="vert-name">Compliance & Regulatory</div>
-        <p class="vert-pain">Never miss a filing. Automated audit trails, document management, and deadline monitoring — built in.</p>
+        <p class="vert-pain">FINTRAC penalties hit $20M. CASL hits $15M. Regulatory changes tracked within 48 hours. Audit evidence compiled in days, not weeks.</p>
         <div class="vert-tag">Compliance · Risk · Governance</div>
-      </div>
-      <div class="vert-card">
+        <div class="vert-learn">See Compliance Agent →</div>
+      </a>
+      <a href="/pages/law.html" class="vert-card vert-card-link">
         <span class="vert-icon">⚖️</span>
         <div class="vert-name">Legal & Law Firms</div>
-        <p class="vert-pain">Intelligent intake, billing automation, and matter management — so your lawyers bill more, not babysit admin.</p>
+        <p class="vert-pain">Client intake, matter qualification, and billing follow-up handled before you look up from your current case. Your lawyers bill hours — not chase admin.</p>
         <div class="vert-tag">Law · Legal Services · Professional</div>
-      </div>
-      <div class="vert-card">
+        <div class="vert-learn">See Law Agent →</div>
+      </a>
+      <a href="/pages/real-estate.html" class="vert-card vert-card-link">
         <span class="vert-icon">🏠</span>
         <div class="vert-name">Real Estate</div>
-        <p class="vert-pain">Lead qualification, FINTRAC compliance, and listing coordination automated for Metro Vancouver's market.</p>
+        <p class="vert-pain">MLS inquiries answered in 60 seconds. FINTRAC compliance automated. Listing coordination on autopilot. Agents spend time showing homes — not doing data entry.</p>
         <div class="vert-tag">Real Estate · Mortgages · Property</div>
-      </div>
-      <div class="vert-card">
+        <div class="vert-learn">See Real Estate Agent →</div>
+      </a>
+      <div class="vert-card vert-card-soon">
         <span class="vert-icon">🌐</span>
-        <div class="vert-name">Personal Brand & Creators</div>
-        <p class="vert-pain">Content calendars, brand deal tracking, DM management, and audience growth — while you create.</p>
+        <div class="vert-name">Personal Brand & Creators <span class="vert-soon-badge">Soon</span></div>
+        <p class="vert-pain">Content calendars, brand deal tracking, DM management, and audience growth automation — so you can focus on creating content that actually matters.</p>
         <div class="vert-tag">Creator · Influencer · Social Media</div>
       </div>
-      <div class="vert-card">
+      <div class="vert-card vert-card-soon">
         <span class="vert-icon">🔧</span>
-        <div class="vert-name">Home Services & Trades</div>
-        <p class="vert-pain">24/7 lead capture, booking, and after-hours follow-up for HVAC, plumbing, electrical, and more.</p>
+        <div class="vert-name">Home Services & Trades <span class="vert-soon-badge">Soon</span></div>
+        <p class="vert-pain">24/7 lead capture, booking, and after-hours follow-up for HVAC, plumbing, electrical, and more. Every after-hours call captured and booked.</p>
         <div class="vert-tag">Trades · Home Services · Local Business</div>
       </div>
     </div>
@@ -716,8 +728,8 @@
         <div class="section-label">The Moment</div>
         <h2>This isn't coming.<br>It's <em>here.</em></h2>
         <p class="why-now-text">Every technology wave rewards the businesses that move first and punishes those that wait. The window between "early advantage" and "playing catch-up" is shorter than it's ever been.</p>
-        <p class="why-now-text">The businesses that embed AI into their operations now will compound that advantage every single day. The ones who wait will spend 3x more to achieve half the results — because their competitors already have 18 months of data, optimization, and customer trust built up.</p>
-        <p class="why-now-text">We're not selling you a future. We're building you the infrastructure that makes your business run like it's already living there.</p>
+        <p class="why-now-text">The businesses embedding AI into operations now are compounding that advantage every single day. 85% of executives expect AI agents to handle real-time decisions by end of 2026. The ones who move first own 18 months of data, optimization, and customer trust before their competition starts the conversation.</p>
+        <p class="why-now-text">We're not selling you a future. We're installing the infrastructure that makes your business operate like it already lives there — faster lead response, zero dropped follow-ups, and revenue running while you sleep.</p>
         <a href="/pages/contact.html" class="btn-primary" style="margin-top:12px;display:inline-flex;">Get Started Now <span>→</span></a>
       </div>
       <div class="timeline">
@@ -799,6 +811,15 @@
         <a href="#system">24/7 Revenue System</a>
         <a href="#agents">AI Agents</a>
         <a href="#packages">Packages</a>
+      </div>
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <a href="/pages/finance.html">Finance & Insurance</a>
+        <a href="/pages/construction.html">Construction</a>
+        <a href="/pages/film.html">Film & Production</a>
+        <a href="/pages/compliance.html">Compliance</a>
+        <a href="/pages/law.html">Legal</a>
+        <a href="/pages/real-estate.html">Real Estate</a>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
