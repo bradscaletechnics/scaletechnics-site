@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agents for Film & TV Production — ScaleTechnics Vancouver</title>
+<meta name="description" content="ScaleTechnics installs AI agents into Vancouver film productions. Automate union payroll compliance, BC tax credit tracking (FIBC/PSTC), call sheets, permit management, and WorkSafe assessments. Hollywood North's production intelligence layer.">
+<meta property="og:title" content="AI Agents for Film & TV Production — ScaleTechnics">
+<meta property="og:description" content="Vancouver productions leave $1.8M+ in BC tax credits on the table. ScaleTechnics Film Agent tracks every qualifying dollar, automates union compliance, and eliminates midnight call sheet rewrites.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scaletechnics.com/pages/film.html">
+<meta property="og:image" content="https://scaletechnics.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://scaletechnics.com/pages/film.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<style>
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -300px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-hero-label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .page-hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(40px, 5.5vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+    max-width: 820px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero-sub {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--gray-4);
+    line-height: 1.6;
+    max-width: 580px;
+    margin-bottom: 48px;
+  }
+  .stat-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .stat-chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    background: rgba(200,255,0,0.07);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 40px;
+    padding: 8px 18px;
+  }
+  .stat-chip strong { font-weight: 700; }
+
+  /* ── SECTION SHELL ── */
+  .vt-section {
+    padding: 100px 0;
+    border-top: 1px solid var(--gray-2);
+  }
+  .vt-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .vt-label::before { content: ''; width: 16px; height: 1px; background: var(--accent); }
+  .vt-h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 48px;
+    max-width: 640px;
+  }
+  .vt-h2 em { font-style: italic; color: var(--accent); }
+
+  /* ── PAIN CARD ── */
+  .pain-card {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 44px;
+  }
+  .pain-card ul { list-style: none; padding: 0; }
+  .pain-card ul li {
+    font-size: 16px;
+    color: var(--gray-4);
+    line-height: 1.65;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-2);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .pain-card ul li:last-child { border-bottom: none; }
+  .pain-card ul li::before {
+    content: '▸';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 11px;
+  }
+
+  /* ── BEFORE / AFTER TABLE ── */
+  .transform-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 4px;
+  }
+  .transform-header-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    color: var(--gray-3);
+  }
+  .transform-header-label.after { color: #34d399; }
+
+  .transform-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 12px;
+    margin-bottom: 6px;
+    overflow: hidden;
+  }
+  .transform-cell { padding: 18px 20px; }
+  .transform-cell.topic {
+    border-right: 1px solid var(--gray-2);
+    display: flex;
+    align-items: center;
+  }
+  .transform-cell.topic span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.2px;
+  }
+  .transform-cell.before-cell { border-right: 1px solid var(--gray-2); }
+  .transform-cell.before-cell p { font-size: 13px; color: var(--gray-3); line-height: 1.5; }
+  .transform-cell.after-cell p { font-size: 13px; color: #34d399; line-height: 1.5; }
+  .cell-sub { font-size: 11px; color: #555; margin-top: 4px; font-style: italic; }
+  .cell-sub.green { color: #059669; }
+
+  /* ── METRICS ── */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .metric-box {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 14px;
+    padding: 36px 20px;
+    text-align: center;
+  }
+  .metric-value {
+    font-family: 'Instrument Serif', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .metric-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+
+  /* ── QUOTE ── */
+  .quote-card {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 16px 16px 0;
+    padding: 40px 48px;
+    position: relative;
+  }
+  .quote-mark {
+    font-family: 'Instrument Serif', serif;
+    font-size: 80px;
+    color: var(--gray-2);
+    line-height: 1;
+    position: absolute;
+    top: 16px; left: 32px;
+    user-select: none;
+  }
+  .quote-text {
+    font-family: 'Instrument Serif', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.65;
+    padding-top: 16px;
+    margin-bottom: 20px;
+  }
+  .quote-attr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .quote-note { font-size: 11px; color: #444; margin-top: 12px; }
+
+  /* ── CAPABILITIES LIST ── */
+  .caps-list { list-style: none; padding: 0; }
+  .caps-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--gray-2);
+    font-size: 15px;
+    color: var(--gray-4);
+    line-height: 1.65;
+  }
+  .caps-list li:last-child { border-bottom: none; }
+  .cap-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    background: rgba(200,255,0,0.08);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  /* ── CALLOUT CARD ── */
+  .callout-card {
+    background: var(--gray-1);
+    border: 1px solid rgba(200,255,0,0.15);
+    border-top: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 44px;
+  }
+  .callout-badge {
+    display: inline-block;
+    background: rgba(200,255,0,0.1);
+    border: 1px solid rgba(200,255,0,0.25);
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+  }
+  .callout-card h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+  .callout-card p { font-size: 15px; color: var(--gray-4); line-height: 1.7; }
+
+  /* ── CTA ── */
+  .vt-cta {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 20px;
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .vt-cta::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .vt-cta h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(30px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+  }
+  .vt-cta h2 em { font-style: italic; color: var(--accent); }
+  .vt-cta p { font-size: 17px; color: var(--gray-4); line-height: 1.6; max-width: 520px; margin: 0 auto 44px; }
+
+  /* ── FOOTER OVERRIDE ── */
+  .page-footer {
+    border-top: 1px solid var(--gray-2);
+    padding: 48px 0;
+  }
+  .page-footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .page-footer-logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+  }
+  .page-footer-text { font-size: 12px; color: #333; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .page-hero { padding: 120px 0 70px; }
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    .transform-header { display: none; }
+    .transform-row { grid-template-columns: 1fr; }
+    .transform-cell.topic { border-right: none; border-bottom: 1px solid var(--gray-2); }
+    .transform-cell.before-cell { border-right: none; border-bottom: 1px solid var(--gray-2); }
+    .vt-cta { padding: 50px 28px; }
+    .pain-card { padding: 28px 24px; }
+    .quote-card { padding: 32px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">Scale<span>.</span>Technics</a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a Walkthrough</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">Film & TV Vertical</div>
+    <h1>You're leaving millions<br>in tax credits <em>unclaimed.</em></h1>
+    <p class="page-hero-sub">The average Vancouver production qualifies for $1.8M+ in BC tax credits — but claiming them requires meticulous payroll tracking across 4 unions, 36 months of filing windows, and zero errors. Most productions do it manually.</p>
+    <div class="stat-row">
+      <div class="stat-chip"><strong>$4.9B</strong> BC film industry annually</div>
+      <div class="stat-chip"><strong>400+</strong> productions per year in BC</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE PROBLEM ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">The Problem</div>
+    <h2 class="vt-h2">If you're a UPM or production accountant in Vancouver, <em>you know this:</em></h2>
+    <div class="pain-card">
+      <ul>
+        <li>4 unions on every set — IATSE 891, Teamsters 155, UBCP/ACTRA, DGC — each with their own rate card, fringe structure, overtime rules, and 2025 increases. None of them align with each other.</li>
+        <li>One fringe miscalculation triggers a union grievance halfway through a 60-day shoot. There is no good time to handle this — especially not at 7pm during a night shoot.</li>
+        <li>The PSTC claim is due within 36 months. The documentation lives in 11 different spreadsheets, three accountants' inboxes, and a folder nobody can find on the shared drive.</li>
+        <li>Call sheets go out via email chains. A revised schedule at 6pm means someone works until midnight rebuilding them — and still misses a department head who was moved to a different unit.</li>
+        <li>Permit applications for 12 locations, all with different City of Vancouver lead times. One gets missed. You find out the morning of the shoot when a bylaw officer shows up before the crew does.</li>
+        <li>WorkSafe BC risk assessment for a stunt sequence written by hand at 11pm the night before. It's not that nobody cares — there simply isn't enough time in the day.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRANSFORMATION ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">The Transformation</div>
+    <h2 class="vt-h2">Here's what <em>changes.</em></h2>
+
+    <div class="transform-header">
+      <div class="transform-header-label">Area</div>
+      <div class="transform-header-label">Before</div>
+      <div class="transform-header-label after">After the Film Agent</div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Union Payroll</span></div>
+      <div class="transform-cell before-cell">
+        <p>Manual rate lookups per union, fringe calculation errors</p>
+        <p class="cell-sub">Compliance checked after the fact — when it's already a problem</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Auto-calculated rates + fringes per contract, compliance-checked before payroll runs</p>
+        <p class="cell-sub green">Zero fringe miscalculations across all 4 unions</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Tax Credit Claims</span></div>
+      <div class="transform-cell before-cell">
+        <p>11 spreadsheets, missed qualifying expenses</p>
+        <p class="cell-sub">36-month scramble to reconstruct records from memory</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Auto-categorized qualifying BC spend, claim documentation built in real time</p>
+        <p class="cell-sub green">Every dollar tracked. Nothing left on the table.</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Call Sheets</span></div>
+      <div class="transform-cell before-cell">
+        <p>Email rebuild on every schedule change, midnight rewrites</p>
+        <p class="cell-sub">Version control chaos. Department heads missed.</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>AI-generated from shooting schedule, conflict-detected, distributed in under 24 hrs</p>
+        <p class="cell-sub green">Changes in, call sheet out — no midnight rebuilds</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Permits</span></div>
+      <div class="transform-cell before-cell">
+        <p>Spreadsheet tracking, missed lead times</p>
+        <p class="cell-sub">Bylaw officers on shoot day is how you find out</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Auto-generated applications, deadline calendar per location</p>
+        <p class="cell-sub green">City of Vancouver requirements flagged before you book the location</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>WorkSafe Assessments</span></div>
+      <div class="transform-cell before-cell">
+        <p>Written by hand the night before, inconsistent quality</p>
+        <p class="cell-sub">Missed hazard flags that show up during inspection</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Auto-generated from production elements — stunt, pyro, and height flags surfaced automatically</p>
+        <p class="cell-sub green">Every sequence assessed. No 11pm scrambles.</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Extras Management</span></div>
+      <div class="transform-cell before-cell">
+        <p>Paper vouchers, payroll integration done manually at wrap</p>
+        <p class="cell-sub">Casting database and payroll never talking to each other</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Digital vouchers, payroll integration live throughout production</p>
+        <p class="cell-sub green">From casting call to cheque — zero paper trail</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METRICS ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">By the Numbers</div>
+    <div class="metrics-grid">
+      <div class="metric-box">
+        <div class="metric-value">$1.8M+</div>
+        <div class="metric-label">Average BC Tax Credit Per Mid-Budget Production</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">−70%</div>
+        <div class="metric-label">Tax Credit Claim Prep Time</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">Zero</div>
+        <div class="metric-label">Union Fringe Miscalculations</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">&lt;24hr</div>
+        <div class="metric-label">Call Sheet Turnaround</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUOTE ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="quote-card">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">We recovered $2.1M in PSTC credits on our last production that we would have missed. The agent caught qualifying expenses we'd been miscategorizing for years. It paid for itself before we wrapped principal photography.</p>
+      <div class="quote-attr">Production Accountant — Netflix Canada Production, Vancouver</div>
+      <div class="quote-note">* Illustrative based on production outcomes using automated tax credit tracking workflows.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CAPABILITIES ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">Capabilities</div>
+    <h2 class="vt-h2">The Film Agent runs your <em>entire production back office.</em></h2>
+    <ul class="caps-list">
+      <li>
+        <div class="cap-num">01</div>
+        <span>Calculates rates, fringe packages, and overtime for all 4 unions — IATSE 891, Teamsters 155, UBCP/ACTRA, and DGC — automatically updated for 2025 collective agreement increases. Compliance-checked before payroll runs, not after.</span>
+      </li>
+      <li>
+        <div class="cap-num">02</div>
+        <span>Tracks and categorizes every qualifying BC labour expenditure for FIBC and PSTC claims in real time — with the 2025 PSTC increase to 36%, every dollar tracked is a dollar recovered from a claim that would otherwise be missed.</span>
+      </li>
+      <li>
+        <div class="cap-num">03</div>
+        <span>Converts shooting schedules to call sheets automatically — tagged by department, conflict-checked against the latest crew list, distributed in under 24 hours regardless of last-minute schedule changes.</span>
+      </li>
+      <li>
+        <div class="cap-num">04</div>
+        <span>Manages City of Vancouver and BC Film Commission permit applications, tracks lead times per location type, and flags deadline risk before it becomes a shoot-day surprise. Every location in the pipeline, tracked automatically.</span>
+      </li>
+      <li>
+        <div class="cap-num">05</div>
+        <span>Generates WorkSafe BC risk assessments from your production breakdown — stunt sequences, pyrotechnics, and elevated work flagged automatically. No more hand-written assessments at 11pm the night before.</span>
+      </li>
+      <li>
+        <div class="cap-num">06</div>
+        <span>Manages extras and background casting from casting call to digital voucher to payroll integration — centralized, paperless, and live throughout production rather than reconciled in a panic at wrap.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ HOLLYWOOD NORTH CALLOUT ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="callout-card">
+      <div class="callout-badge">Hollywood North</div>
+      <h3>Vancouver is the 3rd largest production hub in North America</h3>
+      <p>Netflix, Disney+, Amazon, and Apple TV+ all have long-term studio leases in BC. The 2025 PSTC increase to 36% (from 28%) makes proper expense tracking more valuable than ever — the delta between a clean claim and a sloppy one just got significantly larger. This is the market. This is the moment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-cta">
+      <h2>How much did your last production<br>leave <em>unclaimed?</em></h2>
+      <p>Book a 20-minute demo. We'll run your last production's BC payroll through the agent and show you exactly what you qualified for.</p>
+      <a href="contact.html" class="btn">Book a Demo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="page-footer-inner">
+      <div class="page-footer-logo">ScaleTechnics</div>
+      <div class="page-footer-text">Film & TV Vertical · Vancouver, BC · © 2026 ScaleTechnics</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
