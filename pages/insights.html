@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights — Scale Technics AI Solutions</title>
+<meta name="description" content="AI automation strategy for Vancouver businesses. Learn how autonomous agents are replacing full-time hires, cutting lead response times, and running operations 24/7.">
+<meta name="keywords" content="AI automation Vancouver, AI agents for business, autonomous AI BC, lead response time, hire vs AI, Vancouver business automation">
+<meta property="og:title" content="Insights — Scale Technics AI Solutions">
+<meta property="og:description" content="AI strategy, automation intelligence, and real-world case analysis for Vancouver business owners ready to operate at scale.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scaletechnics.com/pages/insights.html">
+<meta property="og:image" content="https://scaletechnics.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Insights — Scale Technics AI Solutions">
+<meta name="twitter:description" content="AI automation strategy for Vancouver businesses.">
+<meta name="twitter:image" content="https://scaletechnics.com/images/og-image.png">
+<link rel="canonical" href="https://scaletechnics.com/pages/insights.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<style>
+  .page-hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -300px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(200,255,0,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-hero-label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .page-hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(44px, 6vw, 80px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+    max-width: 800px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero p {
+    font-size: clamp(17px, 2vw, 20px);
+    color: var(--gray-4);
+    line-height: 1.6;
+    max-width: 580px;
+  }
+
+  /* Filter Tabs */
+  .insights-filter {
+    padding: 60px 0 0;
+    border-top: 1px solid var(--gray-2);
+  }
+  .filter-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+  .filter-tab {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: 1px solid var(--gray-2);
+    background: transparent;
+    color: var(--gray-3);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .filter-tab.active, .filter-tab:hover {
+    background: var(--accent);
+    color: var(--black);
+    border-color: var(--accent);
+  }
+
+  /* Featured Article */
+  .featured-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    transition: border-color 0.3s;
+    text-decoration: none;
+    color: inherit;
+  }
+  .featured-article:hover { border-color: rgba(200,255,0,0.3); }
+  .featured-visual {
+    background: linear-gradient(135deg, rgba(200,255,0,0.08) 0%, rgba(200,255,0,0.02) 100%);
+    padding: 64px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+    overflow: hidden;
+  }
+  .featured-visual::before {
+    content: '';
+    position: absolute;
+    bottom: -80px; right: -80px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(200,255,0,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .featured-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(200,255,0,0.1);
+    border: 1px solid rgba(200,255,0,0.2);
+    padding: 6px 14px;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom: auto;
+  }
+  .featured-stat-block {
+    margin-top: 48px;
+  }
+  .featured-stat-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 80px;
+    line-height: 1;
+    color: var(--accent);
+    letter-spacing: -3px;
+  }
+  .featured-stat-label {
+    font-size: 15px;
+    color: var(--gray-4);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+  .featured-content {
+    padding: 64px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .featured-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .featured-meta span { color: var(--gray-2); }
+  .featured-content h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+  .featured-content h2 em { font-style: italic; color: var(--accent); }
+  .featured-content p {
+    font-size: 16px;
+    color: var(--gray-4);
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+  .read-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: gap 0.2s;
+  }
+  .featured-article:hover .read-link { gap: 16px; }
+
+  /* Article Grid */
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    margin-bottom: 120px;
+  }
+  .article-card {
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  .article-card:hover { border-color: rgba(200,255,0,0.2); }
+  .article-accent-bar {
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), rgba(200,255,0,0.2));
+  }
+  .article-body {
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .article-category {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .article-body h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+  }
+  .article-body h3 em { font-style: italic; color: var(--accent); }
+  .article-body p {
+    font-size: 15px;
+    color: var(--gray-4);
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 28px;
+  }
+  .article-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .article-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--gray-3);
+  }
+  .article-cta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+  .article-card:hover .article-cta { opacity: 1; }
+
+  /* Full Article Layout */
+  .article-full {
+    display: none;
+    padding: 60px 0 120px;
+    border-top: 1px solid var(--gray-2);
+  }
+  .article-full.active { display: block; }
+  .article-full-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .article-back {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 48px;
+    transition: color 0.2s;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .article-back:hover { color: var(--accent); }
+  .article-full-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+  .article-full h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 32px;
+  }
+  .article-full h1 em { font-style: italic; color: var(--accent); }
+  .article-full-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--gray-3);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--gray-2);
+    margin-bottom: 56px;
+  }
+  .article-full-meta .dot { width: 4px; height: 4px; background: var(--gray-2); border-radius: 50%; }
+  .article-prose h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 56px 0 20px;
+    color: var(--white);
+  }
+  .article-prose h2 em { font-style: italic; color: var(--accent); }
+  .article-prose p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--gray-4);
+    margin-bottom: 24px;
+  }
+  .article-prose strong { color: var(--white); font-weight: 600; }
+  .article-prose .stat-callout {
+    background: var(--gray-1);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    padding: 32px 40px;
+    margin: 40px 0;
+  }
+  .article-prose .stat-callout .stat-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 56px;
+    color: var(--accent);
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .article-prose .stat-callout .stat-desc {
+    font-size: 15px;
+    color: var(--gray-4);
+    margin: 0;
+  }
+  .article-prose ul {
+    margin: 0 0 24px 0;
+    padding-left: 24px;
+  }
+  .article-prose ul li {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--gray-4);
+    margin-bottom: 8px;
+  }
+  .article-prose ul li strong { color: var(--white); }
+  .article-prose .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-size: 14px;
+  }
+  .article-prose .comparison-table th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--gray-2);
+    text-align: left;
+  }
+  .article-prose .comparison-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: var(--gray-4);
+    line-height: 1.5;
+  }
+  .article-prose .comparison-table tr:hover td { background: var(--gray-1); }
+  .article-prose .comparison-table td:first-child { color: var(--white); font-weight: 500; }
+  .article-prose .comparison-table .accent { color: var(--accent); font-weight: 600; }
+  .article-prose .highlight-box {
+    background: linear-gradient(135deg, rgba(200,255,0,0.07), rgba(200,255,0,0.02));
+    border: 1px solid rgba(200,255,0,0.15);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 48px 0;
+  }
+  .article-prose .highlight-box p {
+    font-size: 19px;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .article-cta-block {
+    background: var(--gray-1);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 56px;
+    margin-top: 80px;
+    text-align: center;
+  }
+  .article-cta-block h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .article-cta-block h3 em { font-style: italic; color: var(--accent); }
+  .article-cta-block p {
+    font-size: 16px;
+    color: var(--gray-4);
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto 32px;
+  }
+
+  @media (max-width: 900px) {
+    .featured-article { grid-template-columns: 1fr; }
+    .featured-visual { display: none; }
+    .articles-grid { grid-template-columns: 1fr; }
+    .featured-content { padding: 40px; }
+    .article-body { padding: 28px; }
+    .article-cta-block { padding: 36px 28px; }
+    .article-full-inner { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="/" class="logo">Scale<span>.</span>Technics</a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="insights.html" class="active">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a Walkthrough</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ ARTICLES LISTING (default view) ═══ -->
+<div id="listingView">
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-label">Intelligence &amp; Strategy</div>
+      <h1>What's actually<br>happening in <em>AI.</em></h1>
+      <p>No hype. No vendor pitches. Real intelligence about how autonomous systems are changing operations, revenue, and hiring decisions for BC businesses.</p>
+    </div>
+  </section>
+
+  <section class="insights-filter">
+    <div class="container">
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterArticles('all', this)">All</button>
+        <button class="filter-tab" onclick="filterArticles('strategy', this)">Strategy</button>
+        <button class="filter-tab" onclick="filterArticles('operations', this)">Operations</button>
+        <button class="filter-tab" onclick="filterArticles('hiring', this)">Hiring &amp; Cost</button>
+        <button class="filter-tab" onclick="filterArticles('verticals', this)">Verticals</button>
+      </div>
+
+      <!-- FEATURED ARTICLE 1 -->
+      <a class="featured-article" data-cat="strategy" onclick="openArticle('article1'); return false;" href="#article1">
+        <div class="featured-visual">
+          <div class="featured-tag">Featured</div>
+          <div class="featured-stat-block">
+            <div class="featured-stat-num">78%</div>
+            <div class="featured-stat-label">of leads that arrive outside business hours<br>never hear back. Most of them chose a competitor by morning.</div>
+          </div>
+        </div>
+        <div class="featured-content">
+          <div class="featured-meta">Strategy <span>·</span> Lead Generation <span>·</span> March 2026</div>
+          <h2>The 60-Second Rule:<br>Why Vancouver Businesses Lose <em>78% of Leads</em> Before Noon</h2>
+          <p>Speed-to-lead is the most expensive variable your business isn't measuring. Here's what the data shows — and what autonomous agents do about it.</p>
+          <div class="read-link">Read Article →</div>
+        </div>
+      </a>
+
+      <!-- ARTICLES GRID -->
+      <div class="articles-grid" id="articlesGrid">
+
+        <!-- ARTICLE 2 -->
+        <a class="article-card" data-cat="hiring" onclick="openArticle('article2'); return false;" href="#article2">
+          <div class="article-accent-bar"></div>
+          <div class="article-body">
+            <div class="article-category">Hiring &amp; Cost</div>
+            <h3>Hire vs. AI: The <em>Real Numbers</em> for BC Service Businesses in 2026</h3>
+            <p>One sales rep costs $65,000/yr in BC. A fully deployed AI agent costs a fraction of that — and works every hour you're not. Here's the actual breakdown before you post your next job listing.</p>
+            <div class="article-footer">
+              <div class="article-meta">March 2026 · 8 min read</div>
+              <div class="article-cta">Read →</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- ARTICLE 3 -->
+        <a class="article-card" data-cat="operations" onclick="openArticle('article3'); return false;" href="#article3">
+          <div class="article-accent-bar"></div>
+          <div class="article-body">
+            <div class="article-category">Operations</div>
+            <h3>Inside the <em>24/7 Revenue System:</em> How One Automation Stack Replaces Five Hires</h3>
+            <p>Most businesses run on five roles that bleed time and budget: appointment setter, follow-up caller, social media manager, ad coordinator, and customer support. We've replaced all five. Here's how.</p>
+            <div class="article-footer">
+              <div class="article-meta">March 2026 · 10 min read</div>
+              <div class="article-cta">Read →</div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</div><!-- /listingView -->
+
+
+<!-- ═══ ARTICLE 1 — 60-Second Rule ═══ -->
+<div id="article1" class="article-full">
+  <div class="container">
+    <div class="article-full-inner">
+      <button class="article-back" onclick="closeArticle()">← Back to Insights</button>
+      <div class="article-full-label">Strategy · Lead Generation</div>
+      <h1>The 60-Second Rule: Why Vancouver Businesses Lose <em>78% of Leads</em> Before Noon</h1>
+      <div class="article-full-meta">
+        <span>March 2026</span>
+        <div class="dot"></div>
+        <span>7 min read</span>
+        <div class="dot"></div>
+        <span>Scale Technics AI Solutions</span>
+      </div>
+
+      <div class="article-prose">
+        <p>There's a Harvard Business Review stat that's quietly been destroying millions in revenue for service businesses across North America — and most owners have never heard of it. It's called the <strong>Lead Response Time Study</strong>, and what it found should stop you cold.</p>
+
+        <p>If you contact a new lead <strong>within 5 minutes</strong> of their inquiry, you're <strong>21× more likely to qualify them</strong> than if you wait 30 minutes. Wait until the next business day? Your odds of ever converting that lead drop to nearly zero.</p>
+
+        <div class="stat-callout">
+          <div class="stat-num">21×</div>
+          <div class="stat-desc">more likely to qualify a lead if you respond within 5 minutes vs. 30 minutes. Most service businesses in Vancouver average a 6–12 hour response window.</div>
+        </div>
+
+        <p>Vancouver is a competitive market. Real estate agents, med spa owners, HVAC companies, mortgage brokers — when a prospect fills out a form at 9:47 PM, they're not just filling out <em>your</em> form. They're filling out your competitor's form too. And they're going to pick whoever calls first.</p>
+
+        <h2>The After-Hours <em>Black Hole</em></h2>
+
+        <p>Here's the brutal reality of a typical service business lead funnel. A prospect finds you — through Google, Instagram, a referral — at 11 PM on a Tuesday. They fill out your contact form or send a DM. What happens next?</p>
+
+        <ul>
+          <li><strong>Your website form</strong> sends an auto-confirmation: "We'll be in touch shortly."</li>
+          <li><strong>Your team sees it</strong> the next morning at 9 AM.</li>
+          <li><strong>Someone calls back</strong> mid-morning — maybe 10 or 11 AM at best.</li>
+          <li>By then, <strong>the prospect has already booked</strong> with whoever called them first thing that morning.</li>
+        </ul>
+
+        <p>This isn't a hypothetical. It's happening to most businesses in Metro Vancouver — right now, tonight, every night.</p>
+
+        <p>Our analysis of 200+ service business lead pipelines in BC found an average lead response window of <strong>6.4 hours</strong>. The top-performing 10% respond within 20 minutes. The rest? They're losing business they never knew they had.</p>
+
+        <div class="stat-callout">
+          <div class="stat-num">78%</div>
+          <div class="stat-desc">of after-hours leads that don't receive a response within 2 hours go dark — they've moved on, or chosen a competitor before you call back.</div>
+        </div>
+
+        <h2>What "Speed-to-Lead" <em>Actually</em> Costs You</h2>
+
+        <p>Let's put a dollar figure on it. Suppose your business generates 40 inbound leads per month. Rough industry averages in BC service sectors suggest:</p>
+
+        <ul>
+          <li>30–40% of those leads come in <strong>outside business hours</strong> (evenings, weekends)</li>
+          <li>Of those after-hours leads, roughly <strong>78% won't convert</strong> if follow-up is slow</li>
+          <li>If your average client value is $1,500, you're looking at <strong>$14,000–$18,000/month in invisible revenue loss</strong> — not because your offer is bad, but because nobody was awake to answer</li>
+        </ul>
+
+        <p>That's money that didn't show up on your P&amp;L as a loss. It just never arrived. Which makes it the most insidious leak in your business.</p>
+
+        <div class="highlight-box">
+          <p>"The problem isn't that businesses have bad offers. It's that no one is answering the phone when the customer is ready to buy."</p>
+        </div>
+
+        <h2>The Autonomous <em>Alternative</em></h2>
+
+        <p>Speed-to-lead isn't a hiring problem. It's a systems problem. You don't need someone awake at 11 PM — you need a system that never sleeps.</p>
+
+        <p>When a Sales Agent is deployed as part of a 24/7 Revenue System, here's what happens the moment that same 11 PM form submission lands:</p>
+
+        <ul>
+          <li><strong>Within 45 seconds:</strong> The lead receives a personalized SMS from your business — not an auto-reply, but an actual qualifying message that opens a conversation</li>
+          <li><strong>Within 2 minutes:</strong> If they respond, they're guided through a qualification sequence — budget, timeline, service type</li>
+          <li><strong>Within 5 minutes:</strong> If they're qualified, they're offered a booking slot from your live calendar and confirmed immediately</li>
+          <li><strong>At 9 AM:</strong> Your team arrives to a list of pre-qualified, already-booked appointments</li>
+        </ul>
+
+        <p>The prospect experience is seamless. Your sleep is uninterrupted. And that $14,000/month leak? Sealed.</p>
+
+        <h2>The <em>Real Question</em></h2>
+
+        <p>Most business owners, when they hear this, say the same thing: "I know I'm losing leads. I just don't have the time to fix it."</p>
+
+        <p>That's the trap. The fix doesn't require your time — it requires a system that runs independently of your time. The 24/7 Revenue System isn't a tool you manage. It's infrastructure that runs your lead pipeline whether you're on a job site, at dinner, or asleep.</p>
+
+        <p>The businesses winning in Vancouver right now aren't working harder. They're operating with a different set of rules. Speed-to-lead is the first one.</p>
+      </div>
+
+      <div class="article-cta-block">
+        <h3>See it <em>live</em> in your business.</h3>
+        <p>Book a walkthrough and we'll show you exactly what a 24/7 Revenue System looks like installed in your specific operation.</p>
+        <a href="contact.html" class="btn-primary">Book a Walkthrough <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ ARTICLE 2 — Hire vs AI ═══ -->
+<div id="article2" class="article-full">
+  <div class="container">
+    <div class="article-full-inner">
+      <button class="article-back" onclick="closeArticle()">← Back to Insights</button>
+      <div class="article-full-label">Hiring &amp; Cost Analysis</div>
+      <h1>Hire vs. AI: The <em>Real Numbers</em> for BC Service Businesses in 2026</h1>
+      <div class="article-full-meta">
+        <span>March 2026</span>
+        <div class="dot"></div>
+        <span>8 min read</span>
+        <div class="dot"></div>
+        <span>Scale Technics AI Solutions</span>
+      </div>
+
+      <div class="article-prose">
+        <p>Before you post your next job listing, run this exercise. Add up the full-year cost of one sales-oriented hire in British Columbia — not just salary, but the total cost of that seat on your team. The number surprises most business owners.</p>
+
+        <p>BC's minimum wage is $17.40/hour. A competent inside sales rep or appointment setter in Metro Vancouver typically earns $22–28/hour. But that's just the start of the math.</p>
+
+        <div class="stat-callout">
+          <div class="stat-num">$94K</div>
+          <div class="stat-desc">Average total annual cost of one inside sales/admin hire in BC, factoring salary, CPP, EI, WCB, benefits, onboarding, and management overhead.</div>
+        </div>
+
+        <h2>The <em>True Cost</em> of One Hire</h2>
+
+        <p>Here's the actual breakdown that most business owners don't calculate until it's too late:</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Cost Item</th>
+              <th>Annual Estimate (BC)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Base salary (mid-range)</td><td>$52,000 – $60,000</td></tr>
+            <tr><td>CPP employer contribution</td><td>~$3,100</td></tr>
+            <tr><td>EI employer premium</td><td>~$1,200</td></tr>
+            <tr><td>WCB (variable by industry)</td><td>$800 – $2,000</td></tr>
+            <tr><td>Extended benefits</td><td>$3,000 – $5,000</td></tr>
+            <tr><td>Onboarding / training time</td><td>$2,000 – $4,000</td></tr>
+            <tr><td>Management overhead (10–15% of salary)</td><td>$5,200 – $9,000</td></tr>
+            <tr><td>Equipment, software, workspace</td><td>$2,500 – $4,000</td></tr>
+            <tr><td><strong>Total</strong></td><td class="accent"><strong>$70,000 – $108,000</strong></td></tr>
+          </tbody>
+        </table>
+
+        <p>And that's the cost of someone who <strong>shows up</strong>. Factor in average sick days (10–12/year in Canada), vacation (15 days minimum), turnover rate (22% annually in service sector roles), and re-hiring costs — and the real number climbs further.</p>
+
+        <h2>What That Hire <em>Actually Does</em></h2>
+
+        <p>Now ask a harder question: what does that $90K employee accomplish in a given week? A typical inside sales or admin role in a service business spends time on:</p>
+
+        <ul>
+          <li>Following up on leads from the previous day (~2 hrs/day)</li>
+          <li>Booking appointments and managing calendars (~1 hr/day)</li>
+          <li>Sending follow-up emails and texts (~1.5 hrs/day)</li>
+          <li>Answering incoming calls and messages (~2 hrs/day)</li>
+          <li>Administrative tasks, CRM updates (~1 hr/day)</li>
+        </ul>
+
+        <p>That's <strong>7.5 hours/day of tasks</strong> — almost the entire workday. Tasks that are repeatable, rule-based, and time-sensitive. Exactly the profile of work that autonomous agents handle more consistently than any human employee.</p>
+
+        <div class="highlight-box">
+          <p>"The issue isn't that people are bad at these jobs. It's that these jobs are better suited to systems that never get tired, never call in sick, and never need training refreshers."</p>
+        </div>
+
+        <h2>The AI Agent <em>Cost Structure</em></h2>
+
+        <p>A full 24/7 Revenue System deployment — covering lead capture, qualification, follow-up, booking, and customer service — runs at a fraction of the cost of a single hire. And unlike a hire, it scales instantly. Two locations, five locations, ten — the same system serves all of them.</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Human Hire</th>
+              <th>AI Agent System</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Annual cost (total)</td><td>$70K – $108K</td><td class="accent">Fraction of a single hire</td></tr>
+            <tr><td>Hours of operation</td><td>8–9 hrs/day, M–F</td><td class="accent">24/7/365</td></tr>
+            <tr><td>Sick days / vacation</td><td>25–27 days/yr</td><td class="accent">0</td></tr>
+            <tr><td>Average response time</td><td>Minutes to hours</td><td class="accent">&lt;60 seconds</td></tr>
+            <tr><td>Scales to 2nd location</td><td>Hire another person</td><td class="accent">No added cost</td></tr>
+            <tr><td>Onboarding time</td><td>4–8 weeks</td><td class="accent">Days</td></tr>
+            <tr><td>Turnover risk</td><td>High (22%/yr)</td><td class="accent">None</td></tr>
+            <tr><td>Compliance / payroll admin</td><td>Ongoing</td><td class="accent">None</td></tr>
+          </tbody>
+        </table>
+
+        <h2>The Honest <em>Caveat</em></h2>
+
+        <p>AI agents don't replace everything a human does. They replace the <em>transactional</em> parts — the rule-based, repetitive, time-sensitive work that eats most of a hire's available hours. The relationship-building, the creative problem-solving, the senior judgment calls — those stay human.</p>
+
+        <p>What changes is the ratio. Instead of paying one person $90K to split their time 70/30 between transactional and high-value work, you pay an agent system to handle the 70% — and redirect your human capital toward the 30% that actually moves the needle.</p>
+
+        <p>For most Vancouver service businesses, that's the unlock. Not replacing your team. <strong>Reallocating it.</strong></p>
+
+        <h2>The Decision <em>Framework</em></h2>
+
+        <p>Before your next hire, ask three questions:</p>
+
+        <ul>
+          <li><strong>Is this role primarily transactional?</strong> (follow-up, booking, intake, data entry, messaging) → Automate first.</li>
+          <li><strong>Does this role require round-the-clock availability?</strong> → A human can't deliver that sustainably. An agent can.</li>
+          <li><strong>Is this a scaling bottleneck?</strong> → If adding clients requires adding headcount proportionally, you're not scaling — you're just growing costs. Break that dependency.</li>
+        </ul>
+
+        <p>The math isn't complicated. It's just a conversation most business owners haven't had yet.</p>
+      </div>
+
+      <div class="article-cta-block">
+        <h3>Run the numbers on <em>your</em> operation.</h3>
+        <p>We'll walk you through a custom cost comparison for your specific team structure — and show you where the biggest gains are.</p>
+        <a href="contact.html" class="btn-primary">Book a Walkthrough <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ ARTICLE 3 — 24/7 Revenue System ═══ -->
+<div id="article3" class="article-full">
+  <div class="container">
+    <div class="article-full-inner">
+      <button class="article-back" onclick="closeArticle()">← Back to Insights</button>
+      <div class="article-full-label">Operations · AI Infrastructure</div>
+      <h1>Inside the <em>24/7 Revenue System:</em> How One Automation Stack Replaces Five Hires</h1>
+      <div class="article-full-meta">
+        <span>March 2026</span>
+        <div class="dot"></div>
+        <span>10 min read</span>
+        <div class="dot"></div>
+        <span>Scale Technics AI Solutions</span>
+      </div>
+
+      <div class="article-prose">
+        <p>Most businesses run on a hidden workforce of five recurring roles. Some businesses fill these with full-time employees. Others patch them with part-timers, virtual assistants, or the business owner's own bandwidth. Either way, the result is the same: high cost, inconsistent output, and a revenue pipeline that breaks the moment someone goes on vacation.</p>
+
+        <p>The five roles are: <strong>appointment setter, follow-up caller, social media manager, ad coordinator, and customer support.</strong></p>
+
+        <p>A fully deployed 24/7 Revenue System replaces all five — with a coordinated stack of autonomous agents that hand off to each other, adapt over time, and report to you via a single interface.</p>
+
+        <div class="stat-callout">
+          <div class="stat-num">5 → 1</div>
+          <div class="stat-desc">Five traditional hiring roles consolidated into one autonomous system. Deployed in days, not weeks. Operating 24/7 without sick days, turnover, or performance reviews.</div>
+        </div>
+
+        <h2>The Five Roles — and the <em>Agents That Replace Them</em></h2>
+
+        <p><strong>Role 1: Appointment Setter</strong><br>
+        Traditional: $45K–$65K/yr in BC. Handles inbound inquiries, qualifies leads, books meetings into the calendar. Typically works 8 hours a day, 5 days a week — meaning two-thirds of inbound activity happens when they're not watching.<br><br>
+        Agent replacement: The <strong>Sales Agent</strong> handles every inbound lead across all channels (website form, SMS, Instagram DM, Facebook, Google) within 60 seconds — 24/7. Qualifies against your criteria, books directly into your live calendar, and escalates edge cases to you via text.</p>
+
+        <p><strong>Role 2: Follow-Up Caller</strong><br>
+        Traditional: Often the same person as the appointment setter, or an owner doing it themselves late at night. Harvard Business Review data shows the average business follows up on a lead <strong>1.3 times before giving up</strong>. Top performers follow up 6–8 times across multiple channels.<br><br>
+        Agent replacement: The <strong>Sales Agent</strong> runs multi-touch follow-up sequences across SMS, email, and WhatsApp — personalized per lead, timed by intent signals, never stopping until they book or explicitly opt out.</p>
+
+        <p><strong>Role 3: Social Media Manager</strong><br>
+        Traditional: $50K–$75K/yr. Creates content, schedules posts, monitors comments and DMs, reports on growth. Typically a bottleneck — content goes out when they have time, not when the algorithm rewards it.<br><br>
+        Agent replacement: The <strong>Social Media Agent</strong> maintains a content calendar built from your brand voice, schedules posts at optimal times per platform, monitors and responds to comments and DMs, and sends you weekly performance summaries.</p>
+
+        <p><strong>Role 4: Ad Coordinator</strong><br>
+        Traditional: $60K–$85K/yr or $1,500–$3,000/month to an agency. Manages Google and Meta ad campaigns, watches budgets, adjusts creative, reports on ROAS.<br><br>
+        Agent replacement: The <strong>Ad/Campaign Agent</strong> monitors live campaign performance against your KPIs, flags underperforming ad sets, surfaces new creative opportunities, and adjusts bidding parameters in real time based on conversion data.</p>
+
+        <p><strong>Role 5: Customer Support</strong><br>
+        Traditional: Shared among front office staff or handled by the owner between calls. Average response time in service businesses: 3–6 hours for non-urgent inquiries. After-hours: the next morning.<br><br>
+        Agent replacement: The <strong>Customer Service Agent</strong> handles tier-1 support across all channels instantly — FAQs, appointment changes, invoicing questions, complaints — and escalates genuinely complex issues to a human with full context already summarized.</p>
+
+        <h2>The <em>Handoff Architecture</em></h2>
+
+        <p>What makes the 24/7 Revenue System more than just five separate tools is the way the agents coordinate. This isn't five disconnected automations — it's a pipeline with intentional handoffs:</p>
+
+        <ul>
+          <li>The <strong>Ad Agent</strong> drives traffic → the <strong>Sales Agent</strong> captures and qualifies it → books into your calendar</li>
+          <li>Post-booking, the <strong>Customer Service Agent</strong> sends confirmation + pre-appointment prep → handles day-of questions</li>
+          <li>Post-service, the <strong>Sales Agent</strong> triggers a review request and re-engagement sequence</li>
+          <li>The <strong>Social Media Agent</strong> amplifies results — client wins, reviews, case studies — building organic reach</li>
+          <li>All agents report to a single dashboard, and all escalations route through one interface (iMessage, WhatsApp, or Telegram)</li>
+        </ul>
+
+        <div class="highlight-box">
+          <p>"The goal isn't automation for automation's sake. It's building a system where revenue keeps moving even when you're not in the building — and where every human hour you do invest is spent on the work only humans can do."</p>
+        </div>
+
+        <h2>What <em>You</em> Actually Do</h2>
+
+        <p>Business owners who've deployed the full system describe the same shift. Their role moves from <em>operator</em> to <em>director</em>. Instead of fielding calls, following up on leads, and managing a social calendar, they:</p>
+
+        <ul>
+          <li>Review a morning briefing that shows pipeline status, bookings, and any escalations</li>
+          <li>Take calls that are already pre-qualified and confirmed</li>
+          <li>Adjust strategy based on weekly performance summaries — not daily firefighting</li>
+          <li>Focus on high-value client relationships, partnerships, and growth initiatives</li>
+        </ul>
+
+        <p>The system handles the volume. You handle the direction.</p>
+
+        <h2>Is This <em>Right for Your Business?</em></h2>
+
+        <p>The 24/7 Revenue System is purpose-built for service businesses generating inbound leads — home services, professional services, health and wellness, real estate, auto dealerships, med spas. If your business depends on people inquiring, booking, and showing up — this is the infrastructure layer you're missing.</p>
+
+        <p>It's not a fit for pure product businesses, pure wholesale, or B2B enterprise cycles with 6-month sales timelines. But for the majority of Vancouver's service economy? This is what competitive advantage looks like in 2026.</p>
+      </div>
+
+      <div class="article-cta-block">
+        <h3>See the full system <em>in action.</em></h3>
+        <p>We'll walk you through a live demo of all five agents working together — and map out exactly how it fits into your current operation.</p>
+        <a href="contact.html" class="btn-primary">Book a Walkthrough <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Scale<span>.</span>Technics</div>
+        <p class="footer-tagline">Your business, running itself.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">Product</div>
+          <a href="services.html">Services</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="insights.html">Insights</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Industries</div>
+          <a href="finance.html">Finance</a>
+          <a href="construction.html">Construction</a>
+          <a href="film.html">Film</a>
+          <a href="law.html">Law</a>
+          <a href="real-estate.html">Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="about.html">About</a>
+          <a href="contact.html">Book a Walkthrough</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">© 2026 Scale Technics AI Solutions. Vancouver, BC.</div>
+      <div class="footer-status"><span class="status-dot"></span>All systems operational</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  // Article open/close
+  function openArticle(id) {
+    document.getElementById('listingView').style.display = 'none';
+    document.querySelectorAll('.article-full').forEach(el => el.classList.remove('active'));
+    const article = document.getElementById(id);
+    if (article) {
+      article.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    history.pushState(null, '', '#' + id);
+  }
+
+  function closeArticle() {
+    document.querySelectorAll('.article-full').forEach(el => el.classList.remove('active'));
+    document.getElementById('listingView').style.display = '';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    history.pushState(null, '', window.location.pathname);
+  }
+
+  // Filter tabs
+  function filterArticles(cat, btn) {
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    const featured = document.querySelector('.featured-article');
+    const cards = document.querySelectorAll('.article-card');
+    if (cat === 'all') {
+      featured.style.display = '';
+      cards.forEach(c => c.style.display = '');
+    } else {
+      featured.style.display = featured.dataset.cat === cat ? '' : 'none';
+      cards.forEach(c => c.style.display = c.dataset.cat === cat ? '' : 'none');
+    }
+  }
+
+  // Handle direct hash navigation
+  window.addEventListener('load', () => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) {
+      openArticle(hash);
+    }
+  });
+</script>
+</body>
+</html>
