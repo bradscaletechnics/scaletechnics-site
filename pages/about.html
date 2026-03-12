@@ -28,7 +28,7 @@
   .st-marker-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: #0a0a0a; background: #c8ff00; padding: 5px 12px; border-radius: 6px; white-space: nowrap; box-shadow: 0 4px 20px rgba(200,255,0,0.35), 0 2px 6px rgba(0,0,0,0.4); }
   @keyframes st-pulse { 0% { box-shadow: 0 0 0 0 rgba(200,255,0,0.5), 0 0 12px rgba(200,255,0,0.3); } 70% { box-shadow: 0 0 0 14px rgba(200,255,0,0), 0 0 12px rgba(200,255,0,0.2); } 100% { box-shadow: 0 0 0 0 rgba(200,255,0,0), 0 0 12px rgba(200,255,0,0.3); } }
   .st-marker-dot { width: 12px; height: 12px; background: #c8ff00; border-radius: 50%; border: 2px solid rgba(10,10,10,0.9); animation: st-pulse 2s ease-out infinite; }
-</style>
+
   .page-hero {
     padding: 160px 0 100px;
     position: relative;
@@ -158,7 +158,7 @@
   }
   .belief-item p { font-size: 14px; color: var(--gray-3); line-height: 1.7; }
 
-  /* Founder */
+  /* Team */
   .founder {
     padding: 100px 0;
   }
@@ -167,6 +167,11 @@
     grid-template-columns: 1fr 1.4fr;
     gap: 80px;
     align-items: start;
+  }
+  .team-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
   .founder-card {
     background: var(--gray-1);
@@ -431,33 +436,48 @@
   </div>
 </section>
 
-<!-- ═══ FOUNDER ═══ -->
+<!-- ═══ TEAM ═══ -->
 <section class="founder">
   <div class="container">
     <div class="founder-grid">
-      <div class="founder-card">
-        <div class="founder-avatar">
-          <div class="founder-avatar-initials">B</div>
-          <div class="founder-avatar-label">Vancouver, BC</div>
+      <div class="team-cards">
+        <div class="founder-card">
+          <div class="founder-avatar">
+            <div class="founder-avatar-initials">BP</div>
+            <div class="founder-avatar-label">Vancouver, BC</div>
+          </div>
+          <div class="founder-card-info">
+            <div class="founder-name">Brad Palmer</div>
+            <div class="founder-title">Founder — Scale Technics</div>
+            <div class="founder-tags">
+              <div class="founder-tag">AI Strategy</div>
+              <div class="founder-tag">Revenue Operations</div>
+              <div class="founder-tag">Systems Architecture</div>
+            </div>
+          </div>
         </div>
-        <div class="founder-card-info">
-          <div class="founder-name">Brad</div>
-          <div class="founder-title">Founder — Scale Technics</div>
-          <div class="founder-tags">
-            <div class="founder-tag">AI Systems</div>
-            <div class="founder-tag">Revenue Operations</div>
-            <div class="founder-tag">Vancouver</div>
-            <div class="founder-tag">CaptivationHub</div>
+        <div class="founder-card">
+          <div class="founder-avatar" style="height:180px;">
+            <div class="founder-avatar-initials">LZ</div>
+            <div class="founder-avatar-label">Vancouver, BC</div>
+          </div>
+          <div class="founder-card-info">
+            <div class="founder-name">Lee Zhou</div>
+            <div class="founder-title">Full-Stack & AI Engineer</div>
+            <div class="founder-tags">
+              <div class="founder-tag">AI Engineering</div>
+              <div class="founder-tag">Full-Stack</div>
+              <div class="founder-tag">Systems</div>
+            </div>
           </div>
         </div>
       </div>
       <div class="founder-bio">
-        <div class="section-label">The Founder</div>
-        <h2>Built by someone who<br>runs businesses <em>too.</em></h2>
-        <p>Scale Technics was built by Brad, a Vancouver-based operator who has spent years at the intersection of technology and business growth. The company came out of direct experience with the problem — not a venture-funded idea.</p>
-        <p>After seeing firsthand how much revenue service businesses were leaking to slow lead response, inconsistent follow-up, and overwhelmed teams, Brad built the system he wished existed — and then started installing it for others.</p>
-        <p>Today, Scale Technics works with service businesses across Vancouver and the Lower Mainland, building and operating AI infrastructure that runs their revenue engine around the clock.</p>
-        <p>We're a small team on purpose. Every client engagement gets direct attention. No account managers. No hand-offs. The person who builds your system is the person who stays involved.</p>
+        <div class="section-label">The Team</div>
+        <h2>Built by people who<br>run businesses <em>too.</em></h2>
+        <p>Scale Technics was founded by Brad Palmer, a Vancouver-based operator who spent years watching good businesses leak revenue to slow lead response, inconsistent follow-up, and tools that required more management than they saved. The company came out of direct frustration with the problem — not a venture-funded idea.</p>
+        <p>After building the system he wished existed and seeing what it did for his own operations, Brad started installing it for others. Lee Zhou joined as our full-stack and AI engineer — bringing the technical depth to build and maintain production AI infrastructure at the pace clients need.</p>
+        <p>We're a small team on purpose. Every client engagement gets direct attention from the people who built the system. No account managers. No hand-offs. The team that installs your agents is the team that stays involved.</p>
       </div>
     </div>
   </div>
@@ -542,10 +562,13 @@
         <a href="contact.html">Contact</a>
       </div>
       <div class="footer-col">
-        <h4>System</h4>
-        <a href="/#system">24/7 Revenue System</a>
-        <a href="/#agents">AI Agents</a>
-        <a href="/#packages">Packages</a>
+        <h4>Industries</h4>
+        <a href="finance.html">Finance</a>
+        <a href="construction.html">Construction</a>
+        <a href="film.html">Film & Production</a>
+        <a href="compliance.html">Compliance</a>
+        <a href="law.html">Legal</a>
+        <a href="real-estate.html">Real Estate</a>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
