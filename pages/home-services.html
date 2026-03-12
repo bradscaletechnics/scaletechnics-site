@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agents for Small Business Vancouver — ScaleTechnics</title>
+<meta name="description" content="ScaleTechnics installs AI agents for trades, restaurants, clinics, salons, and any small business in Vancouver. Automate booking, customer service, follow-up, and review management. Deploy in under 1 week.">
+<meta property="og:title" content="AI Agents for Small Business — ScaleTechnics Vancouver">
+<meta property="og:description" content="62% of small businesses lose customers to slow response. ScaleTechnics AI agents answer every call, book every appointment, and follow up on every lead — automatically.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scaletechnics.com/pages/home-services.html">
+<meta property="og:image" content="https://scaletechnics.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://scaletechnics.com/pages/home-services.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<style>
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -300px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-hero-label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .page-hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(40px, 5.5vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+    max-width: 820px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero-sub {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--gray-4);
+    line-height: 1.6;
+    max-width: 580px;
+    margin-bottom: 48px;
+  }
+  .stat-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .stat-chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    background: rgba(200,255,0,0.07);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 40px;
+    padding: 8px 18px;
+  }
+  .stat-chip strong { font-weight: 700; }
+
+  /* ── SECTION SHELL ── */
+  .vt-section {
+    padding: 100px 0;
+    border-top: 1px solid var(--gray-2);
+  }
+  .vt-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .vt-label::before { content: ''; width: 16px; height: 1px; background: var(--accent); }
+  .vt-h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 48px;
+    max-width: 640px;
+  }
+  .vt-h2 em { font-style: italic; color: var(--accent); }
+
+  /* ── PAIN CARD ── */
+  .pain-card {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 44px;
+  }
+  .pain-card ul { list-style: none; padding: 0; }
+  .pain-card ul li {
+    font-size: 16px;
+    color: var(--gray-4);
+    line-height: 1.65;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-2);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .pain-card ul li:last-child { border-bottom: none; }
+  .pain-card ul li::before {
+    content: '▸';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 11px;
+  }
+
+  /* ── BEFORE / AFTER TABLE ── */
+  .transform-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 4px;
+  }
+  .transform-header-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    color: var(--gray-3);
+  }
+  .transform-header-label.after { color: #34d399; }
+
+  .transform-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 12px;
+    margin-bottom: 6px;
+    overflow: hidden;
+  }
+  .transform-cell { padding: 18px 20px; }
+  .transform-cell.topic {
+    border-right: 1px solid var(--gray-2);
+    display: flex;
+    align-items: center;
+  }
+  .transform-cell.topic span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.2px;
+  }
+  .transform-cell.before-cell { border-right: 1px solid var(--gray-2); }
+  .transform-cell.before-cell p { font-size: 13px; color: var(--gray-3); line-height: 1.5; }
+  .transform-cell.after-cell p { font-size: 13px; color: #34d399; line-height: 1.5; }
+  .cell-sub { font-size: 11px; color: #555; margin-top: 4px; font-style: italic; }
+  .cell-sub.green { color: #059669; }
+
+  /* ── METRICS ── */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .metric-box {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 14px;
+    padding: 36px 20px;
+    text-align: center;
+  }
+  .metric-value {
+    font-family: 'Instrument Serif', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .metric-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+
+  /* ── QUOTE ── */
+  .quote-card {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 16px 16px 0;
+    padding: 40px 48px;
+    position: relative;
+  }
+  .quote-mark {
+    font-family: 'Instrument Serif', serif;
+    font-size: 80px;
+    color: var(--gray-2);
+    line-height: 1;
+    position: absolute;
+    top: 16px; left: 32px;
+    user-select: none;
+  }
+  .quote-text {
+    font-family: 'Instrument Serif', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.65;
+    padding-top: 16px;
+    margin-bottom: 20px;
+  }
+  .quote-attr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .quote-note { font-size: 11px; color: #444; margin-top: 12px; }
+
+  /* ── CAPABILITIES LIST ── */
+  .caps-list { list-style: none; padding: 0; }
+  .caps-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--gray-2);
+    font-size: 15px;
+    color: var(--gray-4);
+    line-height: 1.65;
+  }
+  .caps-list li:last-child { border-bottom: none; }
+  .cap-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    background: rgba(200,255,0,0.08);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  /* ── INDUSTRY GRID CALLOUT ── */
+  .callout-card {
+    background: var(--gray-1);
+    border: 1px solid rgba(200,255,0,0.15);
+    border-top: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 44px;
+  }
+  .callout-badge {
+    display: inline-block;
+    background: rgba(200,255,0,0.1);
+    border: 1px solid rgba(200,255,0,0.25);
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+  }
+  .callout-card h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+  .callout-card p { font-size: 15px; color: var(--gray-4); line-height: 1.7; margin-bottom: 28px; }
+  .industry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .industry-card {
+    background: var(--black);
+    border: 1px solid var(--gray-2);
+    border-radius: 10px;
+    padding: 20px 20px;
+  }
+  .industry-card-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .industry-card-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .industry-card-list li {
+    font-size: 12px;
+    color: var(--gray-3);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .industry-card-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 10px;
+    top: 1px;
+  }
+
+  /* ── CTA ── */
+  .vt-cta {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 20px;
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .vt-cta::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .vt-cta h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(30px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+  }
+  .vt-cta h2 em { font-style: italic; color: var(--accent); }
+  .vt-cta p { font-size: 17px; color: var(--gray-4); line-height: 1.6; max-width: 520px; margin: 0 auto 44px; }
+
+  /* ── FOOTER OVERRIDE ── */
+  .page-footer {
+    border-top: 1px solid var(--gray-2);
+    padding: 48px 0;
+  }
+  .page-footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .page-footer-logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+  }
+  .page-footer-text { font-size: 12px; color: #333; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .page-hero { padding: 120px 0 70px; }
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    .transform-header { display: none; }
+    .transform-row { grid-template-columns: 1fr; }
+    .transform-cell.topic { border-right: none; border-bottom: 1px solid var(--gray-2); }
+    .transform-cell.before-cell { border-right: none; border-bottom: 1px solid var(--gray-2); }
+    .vt-cta { padding: 50px 28px; }
+    .pain-card { padding: 28px 24px; }
+    .quote-card { padding: 32px 28px; }
+    .industry-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .industry-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">Scale<span>.</span>Technics</a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a Walkthrough</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">Home Services &amp; Small Business Vertical</div>
+    <h1>You didn't start a business<br>to answer the <em>phone all day.</em></h1>
+    <p class="page-hero-sub">Every missed call is a missed booking. Every unanswered DM is a customer who went to your competitor. AI agents fix all of it — for any size business, deployed in under a week.</p>
+    <div class="stat-row">
+      <div class="stat-chip"><strong>62%</strong> of small businesses lose customers to slow response</div>
+      <div class="stat-chip">Deploy in under <strong>1 week</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE PROBLEM ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">The Problem</div>
+    <h2 class="vt-h2">If you run a small business,<br><em>this is your reality:</em></h2>
+    <div class="pain-card">
+      <ul>
+        <li>The phone rang while you were with a client. No one answered. That person booked somewhere else.</li>
+        <li>Your Google reviews are sitting at 3.8 stars because you never had time to respond or ask for new ones.</li>
+        <li>You manually send appointment reminders the night before. Sometimes you forget. No-shows cost you real money.</li>
+        <li>A customer asked a question on Instagram 3 days ago. You just saw it.</li>
+        <li>Your best customer hasn't heard from you in 6 months. You keep meaning to follow up — but never do.</li>
+        <li>You're the only one who knows how to do the booking, the follow-up, and the invoicing. You can't scale.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRANSFORMATION ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">The Transformation</div>
+    <h2 class="vt-h2">Before agents. <em>After agents.</em></h2>
+
+    <div class="transform-header">
+      <div class="transform-header-label">Situation</div>
+      <div class="transform-header-label">Before AI Agents</div>
+      <div class="transform-header-label after">After AI Agents</div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Missed Calls &amp; DMs</span></div>
+      <div class="transform-cell before-cell">
+        <p>Customer goes elsewhere</p>
+        <p class="cell-sub">Every unanswered message is a lost booking</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Instant response — question answered, booking made</p>
+        <p class="cell-sub green">No lead left behind, 24/7</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>No-Shows</span></div>
+      <div class="transform-cell before-cell">
+        <p>1–2 per week, lost revenue</p>
+        <p class="cell-sub">Manual reminders you forget to send</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>−68% no-show rate with automated reminders</p>
+        <p class="cell-sub green">Reminders sent automatically — every time, on schedule</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Google Reviews</span></div>
+      <div class="transform-cell before-cell">
+        <p>Never remember to ask</p>
+        <p class="cell-sub">Stars stuck low, competitors outranking you</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Automated request after every appointment — stars go up</p>
+        <p class="cell-sub green">Consistent review volume drives local SEO rankings</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Customer Reactivation</span></div>
+      <div class="transform-cell before-cell">
+        <p>Customers drift away</p>
+        <p class="cell-sub">You lose regulars simply because no one followed up</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Automated 3-month check-in campaign keeps them coming back</p>
+        <p class="cell-sub green">Revenue from customers you already earned, recaptured</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Quote Follow-Up</span></div>
+      <div class="transform-cell before-cell">
+        <p>Sent and forgotten</p>
+        <p class="cell-sub">Leads go cold while you're focused on current jobs</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>3-touch automated sequence, 2× response rate</p>
+        <p class="cell-sub green">Every quote has a follow-up plan — no manual effort needed</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Owner Bottleneck</span></div>
+      <div class="transform-cell before-cell">
+        <p>Only you know the system</p>
+        <p class="cell-sub">Can't take a day off without things slipping</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Agents handle it — you focus on the work that matters</p>
+        <p class="cell-sub green">Operations run while you're with clients, or off the clock</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METRICS ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">By the Numbers</div>
+    <div class="metrics-grid">
+      <div class="metric-box">
+        <div class="metric-value">−68%</div>
+        <div class="metric-label">No-Show Rate</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">&lt;60s</div>
+        <div class="metric-label">Response to Every Enquiry</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">87%</div>
+        <div class="metric-label">Queries Auto-Resolved</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">1 wk</div>
+        <div class="metric-label">Deploy Time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUOTE ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="quote-card">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">I'm a one-person physiotherapy clinic. I used to spend 2 hours a day on booking calls and reminders. Now the agent handles it all. I've filled 6 more appointments per week just from the follow-up sequences.</p>
+      <div class="quote-attr">Physiotherapist — Vancouver, BC</div>
+      <div class="quote-note">* Illustrative based on small business outcomes using automated booking and follow-up workflows.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CAPABILITIES ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">Capabilities</div>
+    <h2 class="vt-h2">The agents that run your<br><em>entire front office.</em></h2>
+    <ul class="caps-list">
+      <li>
+        <div class="cap-num">01</div>
+        <span>Handles all appointment scheduling, sends automated reminders, manages rescheduling, and cuts no-show rates by 68%. Your calendar fills itself — no manual admin required.</span>
+      </li>
+      <li>
+        <div class="cap-num">02</div>
+        <span>Answers every question instantly across your website, Instagram DMs, Google Messages, and SMS — 87% of queries resolved without you lifting a finger. Available 24/7.</span>
+      </li>
+      <li>
+        <div class="cap-num">03</div>
+        <span>Reactivates cold customers, follows up on quotes with a 3-touch sequence, sends review requests after every job, and runs referral campaigns — revenue you were leaving on the table, recaptured.</span>
+      </li>
+      <li>
+        <div class="cap-num">04</div>
+        <span>Monitors and responds to your Google and Yelp reviews — flags negative feedback for immediate attention and routes positive reviews to your marketing channels automatically.</span>
+      </li>
+      <li>
+        <div class="cap-num">05</div>
+        <span>Manages your intake flow — collects job details, qualifies leads, and routes service requests to the right team member or calendar slot without any manual handling.</span>
+      </li>
+      <li>
+        <div class="cap-num">06</div>
+        <span>Keeps your best customers engaged with seasonal promotions, loyalty check-ins, and service reminders — the relationship management layer that builds repeat business at zero marginal cost.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ INDUSTRY CALLOUT ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="callout-card">
+      <div class="callout-badge">Built For Your Business Type</div>
+      <h3>Your business type, your agent stack</h3>
+      <p>Every deployment is configured specifically for how your business operates — your booking flow, your services, your tone, your most common questions. No two setups are the same.</p>
+      <div class="industry-grid">
+        <div class="industry-card">
+          <div class="industry-card-name">Restaurants &amp; Hospitality</div>
+          <ul class="industry-card-list">
+            <li>Reservation management</li>
+            <li>Review monitoring &amp; response</li>
+            <li>Special events booking</li>
+            <li>Loyalty programme messages</li>
+          </ul>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card-name">Medical, Dental &amp; Wellness</div>
+          <ul class="industry-card-list">
+            <li>Appointment booking + reminders</li>
+            <li>Patient intake automation</li>
+            <li>Recall &amp; reactivation campaigns</li>
+            <li>PIPEDA-compliant communications</li>
+          </ul>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card-name">Trades (Electrical, Plumbing, HVAC)</div>
+          <ul class="industry-card-list">
+            <li>Quote request intake</li>
+            <li>Job scheduling</li>
+            <li>Follow-up for estimates</li>
+            <li>Emergency call routing</li>
+          </ul>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card-name">Salons, Spas &amp; Fitness</div>
+          <ul class="industry-card-list">
+            <li>Booking + automated reminders</li>
+            <li>Waitlist management</li>
+            <li>Membership renewal follow-up</li>
+            <li>Class schedule FAQ</li>
+          </ul>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card-name">Professional Services</div>
+          <ul class="industry-card-list">
+            <li>Lead qualification</li>
+            <li>Appointment booking</li>
+            <li>Onboarding questionnaires</li>
+            <li>Referral requests</li>
+          </ul>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card-name">Retail &amp; E-Commerce</div>
+          <ul class="industry-card-list">
+            <li>Order status &amp; returns handling</li>
+            <li>Back-in-stock notifications</li>
+            <li>Abandoned cart follow-up</li>
+            <li>Loyalty &amp; repeat purchase flows</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-cta">
+      <h2>What would you do with<br><em>10 extra hours a week?</em></h2>
+      <p>Book a free 20-minute discovery call. We'll tell you exactly which agents will have the biggest impact on your business in the first 30 days.</p>
+      <a href="contact.html" class="btn">Book a Free Discovery Call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="page-footer-inner">
+      <div class="page-footer-logo">ScaleTechnics</div>
+      <div class="page-footer-text">Home Services &amp; Small Business Vertical · Vancouver, BC · © 2026 ScaleTechnics</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

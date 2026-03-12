@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agents for Creators & Personal Brands — ScaleTechnics Vancouver</title>
+<meta name="description" content="ScaleTechnics installs AI agents for creators, influencers, musicians, and personal brands. Automate DMs, brand deal pipelines, content calendars, and reputation monitoring. Run your brand like a business.">
+<meta property="og:title" content="AI Agents for Creators & Personal Brands — ScaleTechnics">
+<meta property="og:description" content="Most creators lose 20+ hours a week to DMs, brand deal follow-ups, and content admin. The Personal Brand Agent handles the operational layer of your brand — so you can focus on creating.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scaletechnics.com/pages/personal-brand.html">
+<meta property="og:image" content="https://scaletechnics.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://scaletechnics.com/pages/personal-brand.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<style>
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -300px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-hero-label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .page-hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(40px, 5.5vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+    max-width: 820px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero-sub {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--gray-4);
+    line-height: 1.6;
+    max-width: 580px;
+    margin-bottom: 48px;
+  }
+  .stat-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .stat-chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    background: rgba(200,255,0,0.07);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 40px;
+    padding: 8px 18px;
+  }
+  .stat-chip strong { font-weight: 700; }
+
+  /* ── SECTION SHELL ── */
+  .vt-section {
+    padding: 100px 0;
+    border-top: 1px solid var(--gray-2);
+  }
+  .vt-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .vt-label::before { content: ''; width: 16px; height: 1px; background: var(--accent); }
+  .vt-h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 48px;
+    max-width: 640px;
+  }
+  .vt-h2 em { font-style: italic; color: var(--accent); }
+
+  /* ── PAIN CARD ── */
+  .pain-card {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 44px;
+  }
+  .pain-card ul { list-style: none; padding: 0; }
+  .pain-card ul li {
+    font-size: 16px;
+    color: var(--gray-4);
+    line-height: 1.65;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-2);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .pain-card ul li:last-child { border-bottom: none; }
+  .pain-card ul li::before {
+    content: '▸';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 11px;
+  }
+
+  /* ── BEFORE / AFTER TABLE ── */
+  .transform-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 4px;
+  }
+  .transform-header-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    color: var(--gray-3);
+  }
+  .transform-header-label.after { color: #34d399; }
+
+  .transform-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 12px;
+    margin-bottom: 6px;
+    overflow: hidden;
+  }
+  .transform-cell { padding: 18px 20px; }
+  .transform-cell.topic {
+    border-right: 1px solid var(--gray-2);
+    display: flex;
+    align-items: center;
+  }
+  .transform-cell.topic span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.2px;
+  }
+  .transform-cell.before-cell { border-right: 1px solid var(--gray-2); }
+  .transform-cell.before-cell p { font-size: 13px; color: var(--gray-3); line-height: 1.5; }
+  .transform-cell.after-cell p { font-size: 13px; color: #34d399; line-height: 1.5; }
+  .cell-sub { font-size: 11px; color: #555; margin-top: 4px; font-style: italic; }
+  .cell-sub.green { color: #059669; }
+
+  /* ── METRICS ── */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .metric-box {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 14px;
+    padding: 36px 20px;
+    text-align: center;
+  }
+  .metric-value {
+    font-family: 'Instrument Serif', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .metric-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+
+  /* ── QUOTE ── */
+  .quote-card {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 16px 16px 0;
+    padding: 40px 48px;
+    position: relative;
+  }
+  .quote-mark {
+    font-family: 'Instrument Serif', serif;
+    font-size: 80px;
+    color: var(--gray-2);
+    line-height: 1;
+    position: absolute;
+    top: 16px; left: 32px;
+    user-select: none;
+  }
+  .quote-text {
+    font-family: 'Instrument Serif', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.65;
+    padding-top: 16px;
+    margin-bottom: 20px;
+  }
+  .quote-attr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .quote-note { font-size: 11px; color: #444; margin-top: 12px; }
+
+  /* ── CAPABILITIES LIST ── */
+  .caps-list { list-style: none; padding: 0; }
+  .caps-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--gray-2);
+    font-size: 15px;
+    color: var(--gray-4);
+    line-height: 1.65;
+  }
+  .caps-list li:last-child { border-bottom: none; }
+  .cap-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    background: rgba(200,255,0,0.08);
+    border: 1px solid rgba(200,255,0,0.2);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  /* ── CREATOR TYPES CALLOUT ── */
+  .callout-card {
+    background: var(--gray-1);
+    border: 1px solid rgba(200,255,0,0.15);
+    border-top: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 44px;
+  }
+  .callout-badge {
+    display: inline-block;
+    background: rgba(200,255,0,0.1);
+    border: 1px solid rgba(200,255,0,0.25);
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+  }
+  .callout-card h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+  .callout-card p { font-size: 15px; color: var(--gray-4); line-height: 1.7; margin-bottom: 28px; }
+  .creator-types {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .creator-type {
+    background: var(--black);
+    border: 1px solid var(--gray-2);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .creator-type-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .creator-type-desc {
+    font-size: 12px;
+    color: var(--gray-3);
+    line-height: 1.5;
+  }
+
+  /* ── CTA ── */
+  .vt-cta {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    border-radius: 20px;
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .vt-cta::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .vt-cta h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(30px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+  }
+  .vt-cta h2 em { font-style: italic; color: var(--accent); }
+  .vt-cta p { font-size: 17px; color: var(--gray-4); line-height: 1.6; max-width: 520px; margin: 0 auto 44px; }
+
+  /* ── FOOTER OVERRIDE ── */
+  .page-footer {
+    border-top: 1px solid var(--gray-2);
+    padding: 48px 0;
+  }
+  .page-footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .page-footer-logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray-3);
+  }
+  .page-footer-text { font-size: 12px; color: #333; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .page-hero { padding: 120px 0 70px; }
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    .transform-header { display: none; }
+    .transform-row { grid-template-columns: 1fr; }
+    .transform-cell.topic { border-right: none; border-bottom: 1px solid var(--gray-2); }
+    .transform-cell.before-cell { border-right: none; border-bottom: 1px solid var(--gray-2); }
+    .vt-cta { padding: 50px 28px; }
+    .pain-card { padding: 28px 24px; }
+    .quote-card { padding: 32px 28px; }
+    .creator-types { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .creator-types { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">Scale<span>.</span>Technics</a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a Walkthrough</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">Personal Brand Vertical</div>
+    <h1>Your brand is a business.<br>Start running it like <em>one.</em></h1>
+    <p class="page-hero-sub">Most creators lose 20+ hours a week to DMs, brand deal follow-ups, and content admin. The Personal Brand Agent handles the operational layer — so you can focus on creating.</p>
+    <div class="stat-row">
+      <div class="stat-chip">Creator economy growing to <strong>$480B</strong> by 2027</div>
+      <div class="stat-chip"><strong>80%</strong> of brand deals lost to slow follow-up</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE PROBLEM ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">The Problem</div>
+    <h2 class="vt-h2">If you're building a personal brand,<br><em>this is your reality:</em></h2>
+    <div class="pain-card">
+      <ul>
+        <li>300 DMs sitting unread. Fans feel ignored. Brands give up and move on to the next creator.</li>
+        <li>A sponsorship inquiry from a major brand came in two weeks ago. You never followed up. They signed someone else.</li>
+        <li>You meant to post four times this week. You posted once. The algorithm punished you for it.</li>
+        <li>Your merch launch dropped and 40 people are asking about sizing and shipping in your comments — all unanswered.</li>
+        <li>A mid-tier account posted something that could blow up into a PR issue. You'll find out about it tomorrow.</li>
+        <li>Your manager takes 15% and still can't keep up. Your assistant is overwhelmed and things keep slipping.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRANSFORMATION ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">The Transformation</div>
+    <h2 class="vt-h2">Here's what <em>changes.</em></h2>
+
+    <div class="transform-header">
+      <div class="transform-header-label">Area</div>
+      <div class="transform-header-label">Before</div>
+      <div class="transform-header-label after">After the Personal Brand Agent</div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>DM Response</span></div>
+      <div class="transform-cell before-cell">
+        <p>300 unread DMs, days to respond</p>
+        <p class="cell-sub">Fans and brands waiting with no acknowledgment</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>&lt;2 min auto-response in your voice, brand deals flagged instantly</p>
+        <p class="cell-sub green">Every fan heard, every opportunity caught</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Brand Deal Pipeline</span></div>
+      <div class="transform-cell before-cell">
+        <p>Missed emails, lost deals</p>
+        <p class="cell-sub">Brands signing other creators while you're not looking</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Every inbound tracked, followed up, and deadline-managed</p>
+        <p class="cell-sub green">Zero deals slipping through — full pipeline visibility always</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Content Calendar</span></div>
+      <div class="transform-cell before-cell">
+        <p>Post when you remember</p>
+        <p class="cell-sub">Inconsistent cadence, algorithm penalizes absence</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>2-week rolling calendar, caption drafts ready, reminders sent</p>
+        <p class="cell-sub green">Consistent presence without the mental overhead</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Merch / E-Commerce</span></div>
+      <div class="transform-cell before-cell">
+        <p>Comment chaos during drops</p>
+        <p class="cell-sub">Customers frustrated, restock demand invisible</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Auto-answered, order issues escalated, restock list built</p>
+        <p class="cell-sub green">Every launch runs smoothly no matter the volume</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Reputation</span></div>
+      <div class="transform-cell before-cell">
+        <p>Finding out late</p>
+        <p class="cell-sub">Issues already viral before you know they exist</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Real-time monitoring, flagged within 15 minutes of publication</p>
+        <p class="cell-sub green">Always the first to know — never blindsided</p>
+      </div>
+    </div>
+
+    <div class="transform-row">
+      <div class="transform-cell topic"><span>Press &amp; Bookings</span></div>
+      <div class="transform-cell before-cell">
+        <p>Lost in your inbox</p>
+        <p class="cell-sub">Opportunities missed because no one owned the follow-up</p>
+      </div>
+      <div class="transform-cell after-cell">
+        <p>Routed, tracked, and followed up automatically</p>
+        <p class="cell-sub green">No opportunity falls through — every request gets a response</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METRICS ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">By the Numbers</div>
+    <div class="metrics-grid">
+      <div class="metric-box">
+        <div class="metric-value">&lt;2min</div>
+        <div class="metric-label">DM Response Time</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">Zero</div>
+        <div class="metric-label">Missed Brand Deal Follow-Ups</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">+340%</div>
+        <div class="metric-label">Content Consistency</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">15min</div>
+        <div class="metric-label">Reputation Alert Time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUOTE ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="quote-card">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">I went from 300 unread DMs and two missed brand deals a month to every inquiry tracked and responded to same day. The agent literally paid for itself in the first week.</p>
+      <div class="quote-attr">Music Artist &amp; Content Creator — Vancouver, BC</div>
+      <div class="quote-note">* Illustrative based on creator outcomes using automated brand management workflows.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CAPABILITIES ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-label">Capabilities</div>
+    <h2 class="vt-h2">The Personal Brand Agent handles<br>your entire <em>operational layer.</em></h2>
+    <ul class="caps-list">
+      <li>
+        <div class="cap-num">01</div>
+        <span>Screens and responds to DMs and comments in your voice — Instagram, TikTok, X, and YouTube — around the clock, every day. Fans feel heard, brands get a fast answer.</span>
+      </li>
+      <li>
+        <div class="cap-num">02</div>
+        <span>Tracks every inbound brand deal, follows up automatically with brands that go cold, and manages all deliverable deadlines with multi-stage alerts. Nothing slips.</span>
+      </li>
+      <li>
+        <div class="cap-num">03</div>
+        <span>Maintains your content calendar two weeks ahead — drafts captions, suggests optimal timing per platform, and sends reminders before every posting deadline.</span>
+      </li>
+      <li>
+        <div class="cap-num">04</div>
+        <span>Routes press, booking, and collaboration requests to the right contacts and tracks pending requests with automatic follow-up sequences so every opportunity is pursued.</span>
+      </li>
+      <li>
+        <div class="cap-num">05</div>
+        <span>Handles merch and e-commerce inquiries during drops and launches — sizing, shipping, complaints — so every fan gets an answer even at peak volume.</span>
+      </li>
+      <li>
+        <div class="cap-num">06</div>
+        <span>Monitors your name and brand across social media and news in real time — flags issues, viral moments, and risks within 15 minutes of publication. You're always first to know.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ CREATOR TYPES CALLOUT ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="callout-card">
+      <div class="callout-badge">Your Platform, Your Voice</div>
+      <h3>Built for any creator, any platform</h3>
+      <p>The Personal Brand Agent adapts entirely to your platform, your tone, and your business model. No two deployments are identical — it's trained on how you communicate, not a generic template.</p>
+      <div class="creator-types">
+        <div class="creator-type">
+          <div class="creator-type-name">Musicians &amp; Artists</div>
+          <div class="creator-type-desc">Tour booking, release promo, fan engagement, label and management pipeline — the business side of your art, handled.</div>
+        </div>
+        <div class="creator-type">
+          <div class="creator-type-name">Social Influencers</div>
+          <div class="creator-type-desc">Brand deals, sponsored content calendar, UGC coordination, and affiliate tracking — full commercial pipeline management.</div>
+        </div>
+        <div class="creator-type">
+          <div class="creator-type-name">Athletes</div>
+          <div class="creator-type-desc">Endorsement pipeline, fan engagement, appearance scheduling, and media requests — stay focused on performance.</div>
+        </div>
+        <div class="creator-type">
+          <div class="creator-type-name">Podcasters</div>
+          <div class="creator-type-desc">Guest pipeline, sponsor management, episode promotion, and listener engagement — the back-end of a successful show.</div>
+        </div>
+        <div class="creator-type">
+          <div class="creator-type-name">Business Figures</div>
+          <div class="creator-type-desc">Thought leadership calendar, speaking invitations, LinkedIn engagement, and inbound partnership management.</div>
+        </div>
+        <div class="creator-type">
+          <div class="creator-type-name">Any Public Figure</div>
+          <div class="creator-type-desc">Built around your specific audience, your voice, and your revenue model — not a generic template deployed at scale.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="vt-section">
+  <div class="container">
+    <div class="vt-cta">
+      <h2>Ready to run your brand<br>like a <em>business?</em></h2>
+      <p>Book a 20-minute demo. We'll show you exactly how the agent works in your voice, on your platforms — live.</p>
+      <a href="contact.html" class="btn">Book a Demo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="page-footer-inner">
+      <div class="page-footer-logo">ScaleTechnics</div>
+      <div class="page-footer-text">Personal Brand Vertical · Vancouver, BC · © 2026 ScaleTechnics</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
