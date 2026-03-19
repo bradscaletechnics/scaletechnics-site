@@ -72,16 +72,17 @@ nav .container {
   align-items: center;
 }
 .logo {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--white);
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
-.logo span { color: var(--accent); }
-.nav-links { display: flex; gap: 32px; align-items: center; }
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  max-height: 48px;
+}
+.nav-links { display: flex; gap: 28px; align-items: center; }
 .nav-links a {
   font-size: 13px;
   color: var(--gray-3);
@@ -90,6 +91,83 @@ nav .container {
   transition: color 0.3s;
 }
 .nav-links a:hover { color: var(--white); }
+
+/* ── DROPDOWN NAV ── */
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown > .nav-trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--gray-3);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  transition: color 0.3s;
+}
+.nav-dropdown > .nav-trigger:hover { color: var(--white); }
+.nav-trigger-chevron {
+  font-size: 9px;
+  opacity: 0.5;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+.nav-dropdown:hover .nav-trigger-chevron { transform: rotate(180deg); }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(14,14,14,0.97);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 220px;
+  backdrop-filter: blur(20px);
+  z-index: 2000;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+}
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 7px;
+  font-size: 13px;
+  color: var(--gray-3);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.nav-dropdown-menu a:hover { background: rgba(255,255,255,0.06); color: var(--white); }
+.nav-dropdown-menu a .dd-icon {
+  font-size: 14px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.nav-dropdown-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin: 6px 8px;
+}
+.nav-dropdown-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gray-2);
+  padding: 8px 12px 4px;
+}
 .nav-cta {
   background: var(--accent) !important;
   color: var(--black) !important;
@@ -102,6 +180,62 @@ nav .container {
 .nav-cta:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 20px rgba(200,255,0,0.3);
+}
+
+/* ── COMPACT AGENT GRID ── */
+.agent-compact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 32px;
+}
+.agent-compact-col {
+  background: var(--gray-1);
+  border: 1px solid var(--gray-2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.acg-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 14px 18px 10px;
+  border-bottom: 1px solid var(--gray-2);
+}
+.acg-row {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  border-bottom: 1px solid var(--gray-2);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.acg-row:last-child { border-bottom: none; }
+.acg-row:hover { background: rgba(255,255,255,0.04); }
+.acg-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gray-2);
+}
+.acg-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--white);
+}
+.acg-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gray-3);
+  letter-spacing: 0.3px;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .agent-compact-grid { grid-template-columns: 1fr; }
+  .acg-role { display: none; }
 }
 
 /* Mobile Nav */
